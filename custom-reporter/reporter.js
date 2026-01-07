@@ -1,5 +1,6 @@
 // Main Reporter Script for Dashboard
 let parser;
+let currentScope = 'all';
 let currentFilter = 'all';
 let currentSort = { column: null, direction: 'asc' };
 let statusChart, suiteChart;
@@ -15,17 +16,47 @@ document.addEventListener('DOMContentLoaded', async () => {
  * Initialize the dashboard with all components
  */
 function initializeDashboard() {
+    refreshDashboard();
+    setupEventListeners();
+}
+
+function refreshDashboard() {
+    setActiveScopeTab(currentScope);
+    updateScopeCounts();
     updateKPIs();
+    renderCategoryCards();
     renderCharts();
     renderTestTable();
-    setupEventListeners();
+}
+
+function setActiveScopeTab(scope = 'all') {
+    document.querySelectorAll('.scope-tab').forEach(tab => {
+        const isActive = tab.dataset.scope === scope;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+}
+
+function updateScopeCounts() {
+    if (!parser) return;
+    const allStats = parser.getScopeStats('all');
+    const frontendStats = parser.getScopeStats('frontend');
+    const backendStats = parser.getScopeStats('backend');
+
+    const allNode = document.getElementById('scopeAllCount');
+    const feNode = document.getElementById('scopeFrontendCount');
+    const beNode = document.getElementById('scopeBackendCount');
+
+    if (allNode) allNode.textContent = allStats.total ?? 0;
+    if (feNode) feNode.textContent = frontendStats.total ?? 0;
+    if (beNode) beNode.textContent = backendStats.total ?? 0;
 }
 
 /**
  * Update KPI cards with test statistics
  */
 function updateKPIs() {
-    const stats = parser.getStats();
+    const stats = parser.getScopeStats(currentScope);
     
     // Update test date
     document.getElementById('testDate').textContent = 
@@ -61,14 +92,112 @@ function updateKPIs() {
     document.getElementById('filterPassedCount').textContent = stats.passed;
     document.getElementById('filterFailedCount').textContent = stats.failed;
     document.getElementById('filterSkippedCount').textContent = stats.skipped;
+
+    updateCategoryKpis();
+}
+
+function updateCategoryKpis() {
+    const frontendStats = parser.getCategoryStat('Frontend');
+    const backendStats = parser.getCategoryStat('Backend');
+
+    updateCategoryKpiCard({
+        totalEl: 'frontendTotal',
+        passedEl: 'frontendPassed',
+        failedEl: 'frontendFailed',
+        passRateEl: 'frontendPassRate',
+        barEl: 'frontendPassRateBar',
+        stats: frontendStats
+    });
+
+    updateCategoryKpiCard({
+        totalEl: 'backendTotal',
+        passedEl: 'backendPassed',
+        failedEl: 'backendFailed',
+        passRateEl: 'backendPassRate',
+        barEl: 'backendPassRateBar',
+        stats: backendStats
+    });
+}
+
+function updateCategoryKpiCard({ totalEl, passedEl, failedEl, passRateEl, barEl, stats }) {
+    const total = stats.total || 0;
+    const passed = stats.passed || 0;
+    const failed = stats.failed || 0;
+    const passRate = total > 0 ? Math.round((passed / total) * 100) : 0;
+    const totalNode = document.getElementById(totalEl);
+    const passedNode = document.getElementById(passedEl);
+    const failedNode = document.getElementById(failedEl);
+    const passRateNode = document.getElementById(passRateEl);
+    const barNode = document.getElementById(barEl);
+
+    if (!totalNode || !passedNode || !failedNode || !passRateNode || !barNode) {
+        return;
+    }
+
+    totalNode.textContent = total;
+    passedNode.textContent = passed;
+    failedNode.textContent = failed;
+    passRateNode.textContent = `Pass Rate: ${passRate}%`;
+    barNode.style.width = `${passRate}%`;
+}
+
+function renderCategoryCards() {
+    const categories = parser.getCategoryStats().filter(cat => {
+        if (currentScope === 'all') return true;
+        return cat.name.toLowerCase() === currentScope;
+    });
+    const container = document.getElementById('categoryCards');
+    if (!container) return;
+    container.innerHTML = '';
+
+    categories.forEach(cat => {
+        const card = document.createElement('div');
+        card.className = 'category-card';
+        const passRate = cat.total ? Math.round((cat.passed / cat.total) * 100) : 0;
+        card.innerHTML = `
+            <div class="category-card__header">
+                <h3>${escapeHtml(cat.name)}</h3>
+                <span class="badge">${cat.total} tests</span>
+            </div>
+            <div class="category-card__metrics">
+                <div>
+                    <span class="label">Passed</span>
+                    <strong>${cat.passed}</strong>
+                </div>
+                <div>
+                    <span class="label">Failed</span>
+                    <strong>${cat.failed}</strong>
+                </div>
+                <div>
+                    <span class="label">Skipped</span>
+                    <strong>${cat.skipped}</strong>
+                </div>
+            </div>
+            <div class="category-card__progress">
+                <span>Pass Rate</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:${passRate}%;"></div>
+                </div>
+                <span class="pass-rate">${passRate}%</span>
+            </div>
+        `;
+        container.appendChild(card);
+    });
 }
 
 /**
  * Render charts using Chart.js
  */
 function renderCharts() {
-    const stats = parser.getStats();
-    const suiteStats = parser.getSuiteStats();
+    const stats = parser.getScopeStats(currentScope);
+    const suiteStats = parser.getSuiteStatsByScope(currentScope);
+    
+    if (statusChart) {
+        statusChart.destroy();
+    }
+    if (suiteChart) {
+        suiteChart.destroy();
+    }
     
     // Status Distribution Pie Chart
     const statusCtx = document.getElementById('statusChart').getContext('2d');
@@ -257,12 +386,16 @@ function createTestRow(test) {
  * Get filtered and sorted tests
  */
 function getFilteredAndSortedTests() {
-    let tests = parser.getTests();
+    let tests = parser.getTestsByScope(currentScope);
     
     // Apply search filter
     const searchQuery = document.getElementById('searchInput').value;
     if (searchQuery) {
-        tests = parser.searchTests(searchQuery);
+        const lowerQuery = searchQuery.toLowerCase();
+        tests = tests.filter(test =>
+            test.title.toLowerCase().includes(lowerQuery) ||
+            test.suite.toLowerCase().includes(lowerQuery)
+        );
     }
     
     // Apply status filter
@@ -322,6 +455,16 @@ function sortTests(tests, column, direction) {
  * Setup event listeners
  */
 function setupEventListeners() {
+    // Scope tabs
+    document.querySelectorAll('.scope-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            const selectedScope = tab.dataset.scope || 'all';
+            if (selectedScope === currentScope) return;
+            currentScope = selectedScope;
+            refreshDashboard();
+        });
+    });
+
     // Filter buttons
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
