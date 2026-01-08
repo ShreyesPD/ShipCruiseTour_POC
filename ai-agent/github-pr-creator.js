@@ -184,9 +184,10 @@ This PR was generated automatically by the AI Agent system. The fixes were analy
         {
           method: 'POST',
           headers: {
-            'Authorization': `token ${this.config.githubToken}`,
+            'Authorization': `Bearer ${this.config.githubToken}`,
             'Content-Type': 'application/json',
-            'Accept': 'application/vnd.github.v3+json'
+            'Accept': 'application/vnd.github+json',
+            'X-GitHub-Api-Version': '2022-11-28'
           },
           body: JSON.stringify({
             title: prDetails.title,

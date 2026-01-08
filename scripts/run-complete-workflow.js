@@ -33,6 +33,11 @@ async function runWorkflow() {
     await waitForServer('http://localhost:8000', 30000);
     console.log('✅ Server is ready');
     
+    // Auto-launch website in browser
+    console.log('🌐 Opening website in browser...');
+    await openInBrowser('http://localhost:8000');
+    await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for browser to open
+    
     // Step 2: Run tests
     console.log('\n📋 Step 2: Running tests...');
     console.log('─'.repeat(80));
@@ -52,9 +57,16 @@ async function runWorkflow() {
     console.log('\n📋 Step 3: Generating test dashboard...');
     console.log('─'.repeat(80));
     
-    generateDashboard();
+    execSync('node scripts/build-dashboard.js', { stdio: 'inherit' });
     steps.generateDashboard = true;
     console.log('✅ Dashboard generated');
+    
+    // Auto-launch dashboard in browser
+    const dashboardPath = path.join(process.cwd(), 'custom-report', 'index.html');
+    if (fs.existsSync(dashboardPath)) {
+      console.log('📊 Opening test dashboard in browser...');
+      await openInBrowser(`file:///${dashboardPath.replace(/\\/g, '/')}`);
+    }
     
     // Step 4: Analyze errors with AI
     console.log('\n📋 Step 4: Analyzing errors with AI...');
@@ -129,6 +141,18 @@ async function runWorkflow() {
     console.error(error.stack);
     return { success: false, error: error.message };
   }
+}
+
+async function openInBrowser(url) {
+  const { exec } = require('child_process');
+  const command = process.platform === 'win32' ? 'start' : 
+                  process.platform === 'darwin' ? 'open' : 'xdg-open';
+  
+  exec(`${command} ${url}`, (error) => {
+    if (error) {
+      console.log(`   ℹ️  Could not auto-open browser. Please visit: ${url}`);
+    }
+  });
 }
 
 function startProjectServer() {

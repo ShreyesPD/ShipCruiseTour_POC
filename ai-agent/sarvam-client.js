@@ -94,7 +94,7 @@ Your response MUST be a valid JSON object with this exact structure:
     "description": "Clear description of the fix",
     "changes": [
       {
-        "file": "path/to/file.js",
+        "file": "tests/frontend/example.spec.js",
         "action": "replace",
         "lineStart": 10,
         "lineEnd": 15,
@@ -104,9 +104,16 @@ Your response MUST be a valid JSON object with this exact structure:
     ]
   },
   "confidence": 0.95,
-  "affectedFiles": ["path/to/file.js"],
+  "affectedFiles": ["tests/frontend/example.spec.js"],
   "testingRecommendations": "How to verify the fix works"
 }
+
+CRITICAL RULES FOR FILE PATHS:
+1. Test files are in tests/frontend/ or tests/backend/ directories
+2. ALWAYS include the full path starting with "tests/"
+3. Example: "tests/frontend/authenticated.spec.js" NOT "frontend/authenticated.spec.js"
+4. Example: "tests/backend/api.spec.js" NOT "backend/api.js"
+5. Use the EXACT file path from the test failure information provided
 
 IMPORTANT: Return ONLY the JSON object, no markdown formatting, no explanations outside the JSON.`;
 
@@ -133,7 +140,8 @@ IMPORTANT: Return ONLY the JSON object, no markdown formatting, no explanations 
     // Test information
     context += `## Test Details\n`;
     context += `- **Test Name**: ${failure.testName}\n`;
-    context += `- **File**: ${failure.file}\n`;
+    context += `- **File Path**: ${failure.file}\n`;
+    context += `- **IMPORTANT**: Use this EXACT file path in your fix: "${failure.file}"\n`;
     context += `- **Line**: ${failure.line || 'unknown'}\n`;
     context += `- **Status**: ${failure.status}\n`;
     context += `- **Duration**: ${failure.duration}ms\n\n`;
