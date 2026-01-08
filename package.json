@@ -4,7 +4,9 @@
   "description": "![img.png](website/public/asset/img.png)",
   "main": "index.js",
   "scripts": {
-    "start": "powershell -ExecutionPolicy Bypass -File ./start-project.ps1",
+    "start": "node -e \"process.platform === 'win32' ? require('child_process').execSync('powershell -ExecutionPolicy Bypass -File ./start-project.ps1', {stdio: 'inherit'}) : require('child_process').execSync('bash ./start-project.sh', {stdio: 'inherit'})\"",
+    "start:windows": "powershell -ExecutionPolicy Bypass -File ./start-project.ps1",
+    "start:unix": "bash ./start-project.sh",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:report": "playwright show-report",

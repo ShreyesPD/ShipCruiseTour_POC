@@ -4,17 +4,26 @@ This guide explains how to start the entire ShipCruiseTour POC project with a si
 
 ## Quick Start
 
-### Option 1: Using npm (Recommended)
+### Option 1: Using npm (Recommended - Cross-platform)
 ```bash
 npm start
 ```
+This automatically detects your OS and runs the appropriate script.
 
-### Option 2: Using Batch File (Double-click)
-Simply double-click `start-project.bat` in the project root directory.
+### Option 2: Platform-Specific Scripts
 
-### Option 3: Using PowerShell Directly
-```powershell
-.\start-project.ps1
+#### Windows
+- **Double-click**: `start-project.bat` in the project root directory
+- **PowerShell**: `.\start-project.ps1`
+- **npm**: `npm run start:windows`
+
+#### macOS/Linux
+- **Terminal**: `bash start-project.sh` or `./start-project.sh`
+- **npm**: `npm run start:unix`
+
+**Note**: On macOS/Linux, you may need to make the script executable first:
+```bash
+chmod +x start-project.sh
 ```
 
 ## What Gets Started
@@ -67,19 +76,33 @@ Get-Job | Remove-Job
 ## Troubleshooting
 
 ### Port 8000 Already in Use
-If port 8000 is already in use, the script will detect the existing server and continue with tests.
+If port 8000 is already in use, the script will automatically stop the existing process and start a new one.
 
 ### PHP Not Found
 Ensure PHP is installed and added to your system PATH.
+- **Windows**: Add PHP to PATH via System Environment Variables
+- **macOS**: Install via Homebrew: `brew install php`
+- **Linux**: Install via package manager: `sudo apt install php` (Ubuntu/Debian) or `sudo yum install php` (RHEL/CentOS)
 
 ### Tests Fail
 The script will continue and build the dashboard even if tests fail, using available results.
 
-### PowerShell Execution Policy Error
+### Windows: PowerShell Execution Policy Error
 If you get an execution policy error, run:
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+
+### macOS/Linux: Permission Denied
+If you get a permission denied error, make the script executable:
+```bash
+chmod +x start-project.sh
+```
+
+### macOS/Linux: curl or lsof Not Found
+These tools are typically pre-installed. If missing:
+- **macOS**: Install via Homebrew: `brew install curl`
+- **Linux**: Install via package manager: `sudo apt install curl lsof`
 
 ## Manual Commands
 
