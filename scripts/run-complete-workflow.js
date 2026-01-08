@@ -61,12 +61,11 @@ async function runWorkflow() {
     steps.generateDashboard = true;
     console.log('✅ Dashboard generated');
     
-    // Auto-launch dashboard in browser
-    const dashboardPath = path.join(process.cwd(), 'custom-report', 'index.html');
-    if (fs.existsSync(dashboardPath)) {
-      console.log('📊 Opening test dashboard in browser...');
-      await openInBrowser(`file:///${dashboardPath.replace(/\\/g, '/')}`);
-    }
+    // Start live server for dashboard
+    dashboardServer = await startDashboardServer();
+    console.log('📊 Opening test dashboard in browser...');
+    await openInBrowser('http://localhost:3000');
+    await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for browser to open
     
     // Step 4: Analyze errors with AI
     console.log('\n📋 Step 4: Analyzing errors with AI...');
@@ -117,7 +116,10 @@ async function runWorkflow() {
     // Cleanup
     console.log('\n📋 Cleaning up...');
     serverProcess.kill();
-    console.log('✅ Server stopped');
+    if (dashboardServer) {
+      dashboardServer.kill();
+    }
+    console.log('✅ Servers stopped');
     
     // Summary
     console.log('\n' + '═'.repeat(80));
@@ -153,6 +155,68 @@ async function openInBrowser(url) {
       console.log(`   ℹ️  Could not auto-open browser. Please visit: ${url}`);
     }
   });
+}
+
+async function startDashboardServer() {
+  console.log('Starting dashboard server on port 3000...');
+  
+  const http = require('http');
+  const dashboardDir = path.join(process.cwd(), 'custom-report');
+  
+  const server = http.createServer((req, res) => {
+    let filePath = path.join(dashboardDir, req.url === '/' ? 'index.html' : req.url);
+    
+    // Security: prevent directory traversal
+    if (!filePath.startsWith(dashboardDir)) {
+      res.writeHead(403);
+      res.end('Forbidden');
+      return;
+    }
+    
+    const extname = path.extname(filePath);
+    const contentTypes = {
+      '.html': 'text/html',
+      '.js': 'text/javascript',
+      '.css': 'text/css',
+      '.json': 'application/json',
+      '.png': 'image/png',
+      '.jpg': 'image/jpg',
+      '.gif': 'image/gif',
+      '.svg': 'image/svg+xml'
+    };
+    
+    const contentType = contentTypes[extname] || 'text/plain';
+    
+    fs.readFile(filePath, (error, content) => {
+      if (error) {
+        if (error.code === 'ENOENT') {
+          res.writeHead(404);
+          res.end('File not found');
+        } else {
+          res.writeHead(500);
+          res.end('Server error: ' + error.code);
+        }
+      } else {
+        res.writeHead(200, { 
+          'Content-Type': contentType,
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        });
+        res.end(content, 'utf-8');
+      }
+    });
+  });
+  
+  server.listen(3000);
+  
+  // Return a mock process object with kill method
+  return {
+    kill: () => {
+      server.close();
+      console.log('✅ Dashboard server stopped');
+    }
+  };
 }
 
 function startProjectServer() {
