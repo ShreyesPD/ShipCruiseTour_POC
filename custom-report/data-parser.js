@@ -208,20 +208,42 @@ class TestDataParser {
             return;
         }
 
-        // Try to find matching analysis by creating a similar ID
-        const testId = `${testObj.file}-${testObj.title}`.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-_]/g, '');
+        // Try multiple matching strategies
+        // Strategy 1: Exact match using file-title ID
+        const testId1 = `${testObj.file}-${testObj.title}`.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-_]/g, '');
         
-        // Check if we have analysis for this test
-        const analysis = this.aiAnalysisData.analyses[testId];
+        // Strategy 2: Match by file and title separately (more flexible)
+        let matchedAnalysis = this.aiAnalysisData.analyses[testId1];
         
-        if (analysis && analysis.aiAnalysis) {
+        if (!matchedAnalysis) {
+            // Try to find by matching file path and test name
+            for (const [key, analysis] of Object.entries(this.aiAnalysisData.analyses)) {
+                // Normalize paths for comparison (handle forward/backward slashes)
+                const normalizedTestFile = testObj.file.replace(/\\/g, '/').toLowerCase();
+                const normalizedAnalysisFile = analysis.file.replace(/\\/g, '/').toLowerCase();
+                const normalizedTestTitle = testObj.title.toLowerCase().trim();
+                const normalizedAnalysisTitle = analysis.testName.toLowerCase().trim();
+                
+                // Check if file paths end with the same relative path
+                if (normalizedTestFile.endsWith(normalizedAnalysisFile) || 
+                    normalizedAnalysisFile.endsWith(normalizedTestFile)) {
+                    // Check if test names match
+                    if (normalizedTestTitle === normalizedAnalysisTitle) {
+                        matchedAnalysis = analysis;
+                        break;
+                    }
+                }
+            }
+        }
+        
+        if (matchedAnalysis && matchedAnalysis.aiAnalysis) {
             testObj.aiAnalysis = {
-                analysis: analysis.aiAnalysis.analysis || '',
-                rootCause: analysis.aiAnalysis.rootCause || '',
-                confidence: analysis.aiAnalysis.confidence || 0,
-                suggestedFix: analysis.aiAnalysis.suggestedFix || null,
-                affectedFiles: analysis.aiAnalysis.affectedFiles || [],
-                testingRecommendations: analysis.aiAnalysis.testingRecommendations || '',
+                analysis: matchedAnalysis.aiAnalysis.analysis || '',
+                rootCause: matchedAnalysis.aiAnalysis.rootCause || '',
+                confidence: matchedAnalysis.aiAnalysis.confidence || 0,
+                suggestedFix: matchedAnalysis.aiAnalysis.suggestedFix || null,
+                affectedFiles: matchedAnalysis.aiAnalysis.affectedFiles || [],
+                testingRecommendations: matchedAnalysis.aiAnalysis.testingRecommendations || '',
                 aiProvider: this.aiAnalysisData.aiProvider || 'AI',
                 model: this.aiAnalysisData.model || 'Unknown'
             };

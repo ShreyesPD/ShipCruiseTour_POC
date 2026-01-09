@@ -84,22 +84,8 @@ async function runWorkflow() {
     
     console.log(`⚠️  Found ${testResults.failureCount} test failure(s)`);
     
-    // Step 3: Generate dashboard
-    console.log('\n📋 Step 3: Generating test dashboard...');
-    console.log('─'.repeat(80));
-    
-    execSync('node scripts/build-dashboard.js', { stdio: 'inherit' });
-    steps.generateDashboard = true;
-    console.log('✅ Dashboard generated');
-    
-    // Start live server for dashboard
-    dashboardServer = await startDashboardServer();
-    console.log('📊 Opening test dashboard in browser...');
-    await openInBrowser('http://localhost:3000');
-    await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for browser to open
-    
-    // Step 4: Analyze errors with AI
-    console.log('\n📋 Step 4: Analyzing errors with AI...');
+    // Step 3: Analyze errors with AI (BEFORE dashboard generation)
+    console.log('\n📋 Step 3: Analyzing errors with AI...');
     console.log('─'.repeat(80));
     
     const analysisResults = await analyzeWithAI();
@@ -112,6 +98,20 @@ async function runWorkflow() {
     }
     
     console.log(`✅ Analyzed ${analysisResults.analysisResults?.length || 0} error(s)`);
+    
+    // Step 4: Generate dashboard (AFTER AI analysis)
+    console.log('\n📋 Step 4: Generating test dashboard with AI analysis...');
+    console.log('─'.repeat(80));
+    
+    execSync('node scripts/build-dashboard.js', { stdio: 'inherit' });
+    steps.generateDashboard = true;
+    console.log('✅ Dashboard generated with AI insights');
+    
+    // Start live server for dashboard
+    dashboardServer = await startDashboardServer();
+    console.log('📊 Opening test dashboard in browser...');
+    await openInBrowser('http://localhost:3000');
+    await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for browser to open
     
     // Step 5: Apply fixes
     console.log('\n📋 Step 5: Applying AI-suggested fixes...');

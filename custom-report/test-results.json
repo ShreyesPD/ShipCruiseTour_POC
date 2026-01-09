@@ -110,10 +110,10 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 19463,
+                      "duration": 18341,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#btnLogin')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 2\u001b[39m\n\n\u001b[32m- shreyes\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+                                     Shreyes\u001b[43m                                \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#btnLogin')\u001b[22m\n\u001b[2m    8 × locator resolved to <button type=\"button\" id=\"btnLogin\" aria-expanded=\"true\" data-bs-toggle=\"dropdown\" class=\"btn dropdown-toggle btn-login show\">↵                                    Shreyes     …</button>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m                                    Shreyes                                \"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#btnLogin')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 2\u001b[39m\n\n\u001b[32m- shreyes\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+                                     Shreyes\u001b[43m                                \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#btnLogin')\u001b[22m\n\u001b[2m    8 × locator resolved to <button type=\"button\" id=\"btnLogin\" aria-expanded=\"true\" data-bs-toggle=\"dropdown\" class=\"btn dropdown-toggle btn-login show\">↵                                    Shreyes     …</button>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m                                    Shreyes                                \"\u001b[22m\n\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:16:26",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#btnLogin')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 2\u001b[39m\n\n\u001b[32m- shreyes\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+                                     Shreyes\u001b[43m                                \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#btnLogin')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" id=\"btnLogin\" aria-expanded=\"true\" data-bs-toggle=\"dropdown\" class=\"btn dropdown-toggle btn-login show\">↵                                    Shreyes     …</button>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m                                    Shreyes                                \"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#btnLogin')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 2\u001b[39m\n\n\u001b[32m- shreyes\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+                                     Shreyes\u001b[43m                                \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#btnLogin')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" id=\"btnLogin\" aria-expanded=\"true\" data-bs-toggle=\"dropdown\" class=\"btn dropdown-toggle btn-login show\">↵                                    Shreyes     …</button>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m                                    Shreyes                                \"\u001b[22m\n\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:16:26",
                         "location": {
                           "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
                           "column": 26,
@@ -128,13 +128,13 @@
                             "column": 26,
                             "line": 16
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#btnLogin')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 2\u001b[39m\n\n\u001b[32m- shreyes\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+                                     Shreyes\u001b[43m                                \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#btnLogin')\u001b[22m\n\u001b[2m    8 × locator resolved to <button type=\"button\" id=\"btnLogin\" aria-expanded=\"true\" data-bs-toggle=\"dropdown\" class=\"btn dropdown-toggle btn-login show\">↵                                    Shreyes     …</button>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m                                    Shreyes                                \"\u001b[22m\n\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m button\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.dropdown-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(button)\u001b[33m.\u001b[39mtoContainText(creds\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39msplit(\u001b[32m'@'\u001b[39m)[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39msplit(\u001b[32m'.'\u001b[39m)[\u001b[35m0\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test(\u001b[32m'reservation page requires authentication'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:16:26\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#btnLogin')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 2\u001b[39m\n\n\u001b[32m- shreyes\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+                                     Shreyes\u001b[43m                                \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#btnLogin')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" id=\"btnLogin\" aria-expanded=\"true\" data-bs-toggle=\"dropdown\" class=\"btn dropdown-toggle btn-login show\">↵                                    Shreyes     …</button>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m                                    Shreyes                                \"\u001b[22m\n\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m button\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.dropdown-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(button)\u001b[33m.\u001b[39mtoContainText(creds\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39msplit(\u001b[32m'@'\u001b[39m)[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39msplit(\u001b[32m'.'\u001b[39m)[\u001b[35m0\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test(\u001b[32m'reservation page requires authentication'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:16:26\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:09.851Z",
+                      "startTime": "2026-01-09T10:25:21.247Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -184,12 +184,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 10845,
+                      "duration": 7970,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:09.891Z",
+                      "startTime": "2026-01-09T10:25:21.375Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -218,7 +218,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 26913,
+                      "duration": 22276,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1:has-text(\"Mes réservations\")')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1:has-text(\"Mes réservations\")')\u001b[22m\n",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1:has-text(\"Mes réservations\")')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1:has-text(\"Mes réservations\")')\u001b[22m\n\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:27:63",
@@ -242,7 +242,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:09.933Z",
+                      "startTime": "2026-01-09T10:25:21.261Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -292,7 +292,7 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "failed",
-                      "duration": 30132,
+                      "duration": 27847,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Login/i\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:8000/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"http://localhost:8000/\"\u001b[22m\n",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Login/i\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:8000/\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"http://localhost:8000/\"\u001b[22m\n\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:33:24",
@@ -316,7 +316,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:09.788Z",
+                      "startTime": "2026-01-09T10:25:21.225Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -374,7 +374,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 16480,
+                      "duration": 7340,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:41:29",
@@ -398,7 +398,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:21.209Z",
+                      "startTime": "2026-01-09T10:25:30.003Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -446,9 +446,9 @@
                   "results": [
                     {
                       "workerIndex": 4,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "timedOut",
-                      "duration": 47386,
+                      "duration": 50122,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -469,7 +469,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:33.466Z",
+                      "startTime": "2026-01-09T10:25:40.268Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -529,14 +529,14 @@
                   "results": [
                     {
                       "workerIndex": 5,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6102,
+                      "duration": 4901,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:39.802Z",
+                      "startTime": "2026-01-09T10:25:42.641Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -563,14 +563,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 1,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 7120,
+                      "duration": 8659,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:40.463Z",
+                      "startTime": "2026-01-09T10:25:48.627Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -596,15 +596,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 3,
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 25657,
+                      "duration": 8681,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:49.087Z",
+                      "startTime": "2026-01-09T10:25:47.900Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -630,10 +630,10 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 2,
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
                       "status": "failed",
-                      "duration": 31184,
+                      "duration": 29275,
                       "error": {
                         "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"",
                         "stack": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js:68:34",
@@ -657,7 +657,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:46.306Z",
+                      "startTime": "2026-01-09T10:25:58.794Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -704,10 +704,10 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 1,
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 27732,
+                      "duration": 25235,
                       "error": {
                         "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"",
                         "stack": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js:87:34",
@@ -731,7 +731,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:16:48.031Z",
+                      "startTime": "2026-01-09T10:25:56.685Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -795,15 +795,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1324,
+                      "duration": 1191,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:15.789Z",
+                      "startTime": "2026-01-09T10:25:57.904Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -829,15 +829,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1977,
+                      "duration": 2035,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:17.165Z",
+                      "startTime": "2026-01-09T10:25:59.157Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -863,15 +863,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2517,
+                      "duration": 3679,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:22.219Z",
+                      "startTime": "2026-01-09T10:26:01.283Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -897,15 +897,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 6,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2453,
+                      "duration": 3974,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:22.263Z",
+                      "startTime": "2026-01-09T10:26:05.103Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -931,15 +931,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1916,
+                      "duration": 10803,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:19.194Z",
+                      "startTime": "2026-01-09T10:26:09.278Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -982,15 +982,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 7026,
+                      "duration": 12038,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:21.192Z",
+                      "startTime": "2026-01-09T10:26:20.360Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1016,15 +1016,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 10,
+                      "workerIndex": 8,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6376,
+                      "duration": 7790,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:27.327Z",
+                      "startTime": "2026-01-09T10:26:31.941Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1050,15 +1050,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5685,
+                      "duration": 7234,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:25.551Z",
+                      "startTime": "2026-01-09T10:26:32.117Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1084,15 +1084,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 2,
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5183,
+                      "duration": 7356,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:25.557Z",
+                      "startTime": "2026-01-09T10:26:35.122Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1118,15 +1118,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 9848,
+                      "duration": 7276,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:28.282Z",
+                      "startTime": "2026-01-09T10:26:32.466Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1169,15 +1169,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 6,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1554,
+                      "duration": 2189,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:30.792Z",
+                      "startTime": "2026-01-09T10:26:39.808Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1204,14 +1204,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4473,
+                      "duration": 2257,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:31.345Z",
+                      "startTime": "2026-01-09T10:26:40.217Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1238,14 +1238,14 @@
                   "results": [
                     {
                       "workerIndex": 9,
-                      "parallelIndex": 2,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4913,
+                      "duration": 4479,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:32.403Z",
+                      "startTime": "2026-01-09T10:26:40.284Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1271,15 +1271,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3985,
+                      "duration": 1988,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:34.149Z",
+                      "startTime": "2026-01-09T10:26:42.070Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1323,14 +1323,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2879,
+                      "duration": 1848,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:35.998Z",
+                      "startTime": "2026-01-09T10:26:42.572Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1356,15 +1356,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 2,
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2265,
+                      "duration": 2223,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:37.436Z",
+                      "startTime": "2026-01-09T10:26:42.954Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1390,15 +1390,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3051,
+                      "duration": 2583,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:38.244Z",
+                      "startTime": "2026-01-09T10:26:44.134Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1424,15 +1424,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 10,
+                      "workerIndex": 8,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1988,
+                      "duration": 1460,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:38.274Z",
+                      "startTime": "2026-01-09T10:26:44.485Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1476,9 +1476,9 @@
                   "results": [
                     {
                       "workerIndex": 11,
-                      "parallelIndex": 1,
+                      "parallelIndex": 3,
                       "status": "failed",
-                      "duration": 400,
+                      "duration": 258,
                       "error": {
                         "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
                         "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:22)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:31:21",
@@ -1502,7 +1502,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:43.722Z",
+                      "startTime": "2026-01-09T10:26:48.133Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1540,9 +1540,9 @@
                   "results": [
                     {
                       "workerIndex": 12,
-                      "parallelIndex": 2,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 463,
+                      "duration": 338,
                       "error": {
                         "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
                         "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:22)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:36:21",
@@ -1566,7 +1566,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:43.919Z",
+                      "startTime": "2026-01-09T10:26:48.414Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1606,12 +1606,12 @@
                       "workerIndex": 13,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 280,
+                      "duration": 177,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:44.450Z",
+                      "startTime": "2026-01-09T10:26:49.102Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1638,9 +1638,9 @@
                   "results": [
                     {
                       "workerIndex": 14,
-                      "parallelIndex": 3,
+                      "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 374,
+                      "duration": 226,
                       "error": {
                         "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
                         "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:22)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:57:21",
@@ -1664,7 +1664,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:45.854Z",
+                      "startTime": "2026-01-09T10:26:49.863Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1710,14 +1710,14 @@
                   "results": [
                     {
                       "workerIndex": 15,
-                      "parallelIndex": 1,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 201,
+                      "duration": 134,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:48.300Z",
+                      "startTime": "2026-01-09T10:26:51.170Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1744,14 +1744,14 @@
                   "results": [
                     {
                       "workerIndex": 16,
-                      "parallelIndex": 2,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 171,
+                      "duration": 130,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:48.539Z",
+                      "startTime": "2026-01-09T10:26:51.480Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1780,12 +1780,12 @@
                       "workerIndex": 13,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 93,
+                      "duration": 56,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:17:44.895Z",
+                      "startTime": "2026-01-09T10:26:49.378Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1805,8 +1805,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-09T10:16:07.308Z",
-    "duration": 101567.84999999999,
+    "startTime": "2026-01-09T10:25:18.490Z",
+    "duration": 93243.649,
     "expected": 26,
     "skipped": 0,
     "unexpected": 10,
