@@ -19,5 +19,8 @@ module.exports = {
   
   rollbackOnFailure: false,
   
-  reportDir: './ai-agent-reports'
+  reportDir: './ai-agent-reports',
+  
+  // GitHub PR reviewers - array of GitHub usernames
+  reviewers: ['krishsharma1008']
 };

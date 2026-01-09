@@ -11,6 +11,7 @@ class GitHubPRCreator {
       baseBranch: config.baseBranch || 'main',
       branchPrefix: config.branchPrefix || 'ai-fix',
       autoMergeable: config.autoMergeable || false,
+      reviewers: config.reviewers || [],
       ...config
     };
   }
@@ -234,6 +235,12 @@ This PR was generated automatically by the AI Agent system. The fixes were analy
       }
 
       const pr = await response.json();
+      
+      // Add reviewers if configured
+      if (this.config.reviewers && this.config.reviewers.length > 0) {
+        await this.addReviewers(pr.number, this.config.reviewers);
+      }
+      
       return pr.html_url;
     } catch (error) {
       console.error(`❌ Failed to create PR via API: ${error.message}`);
@@ -273,21 +280,31 @@ This PR was generated automatically by the AI Agent system. The fixes were analy
       return;
     }
 
+    if (!reviewers || reviewers.length === 0) {
+      return;
+    }
+
     try {
       const fetch = (await import('node-fetch')).default;
       
-      await fetch(
+      const response = await fetch(
         `https://api.github.com/repos/${this.config.repoOwner}/${this.config.repoName}/pulls/${prNumber}/requested_reviewers`,
         {
           method: 'POST',
           headers: {
-            'Authorization': `token ${this.config.githubToken}`,
+            'Authorization': `Bearer ${this.config.githubToken}`,
             'Content-Type': 'application/json',
-            'Accept': 'application/vnd.github.v3+json'
+            'Accept': 'application/vnd.github+json',
+            'X-GitHub-Api-Version': '2022-11-28'
           },
           body: JSON.stringify({ reviewers })
         }
       );
+
+      if (!response.ok) {
+        const error = await response.json().catch(() => ({ message: 'Unknown error' }));
+        throw new Error(`GitHub API error: ${error.message}`);
+      }
       
       console.log(`✅ Added reviewers: ${reviewers.join(', ')}`);
     } catch (error) {
