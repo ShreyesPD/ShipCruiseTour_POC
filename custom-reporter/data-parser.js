@@ -2,6 +2,7 @@
 class TestDataParser {
     constructor() {
         this.testData = null;
+        this.aiAnalysisData = null;
         this.suites = new Map();
         this.tests = [];
         this.categoryStats = new Map();
@@ -24,6 +25,7 @@ class TestDataParser {
         this.suites = new Map();
         this.tests = [];
         this.categoryStats = new Map();
+        this.aiAnalysisData = null;
     }
 
     /**
@@ -36,12 +38,32 @@ class TestDataParser {
                 throw new Error(`Failed to load test data: ${response.statusText}`);
             }
             this.testData = await response.json();
+            
+            // Try to load AI analysis data
+            await this.loadAIAnalysis();
+            
             this.parseData();
             return this.testData;
         } catch (error) {
             console.error('Error loading test data:', error);
             // Return mock data for demonstration if file doesn't exist
             return this.generateMockData();
+        }
+    }
+
+    /**
+     * Load AI analysis data if available
+     */
+    async loadAIAnalysis() {
+        try {
+            const response = await fetch('../ai-analysis.json');
+            if (response.ok) {
+                this.aiAnalysisData = await response.json();
+                console.log('✅ Loaded AI analysis data:', this.aiAnalysisData.analyzedFailures, 'analyses');
+            }
+        } catch (error) {
+            console.log('ℹ️  No AI analysis data available');
+            this.aiAnalysisData = null;
         }
     }
 
@@ -137,8 +159,12 @@ class TestDataParser {
                 } : null,
                 retries: results.length - 1,
                 file: spec.file || '',
-                attachments: attachments
+                attachments: attachments,
+                aiAnalysis: null
             };
+            
+            // Merge AI analysis if available for this test
+            this.mergeAIAnalysis(testObj);
 
             // Update statistics
             this.stats.total++;
@@ -172,6 +198,34 @@ class TestDataParser {
 
             this.tests.push(testObj);
         });
+    }
+
+    /**
+     * Merge AI analysis data with test object
+     */
+    mergeAIAnalysis(testObj) {
+        if (!this.aiAnalysisData || !this.aiAnalysisData.analyses) {
+            return;
+        }
+
+        // Try to find matching analysis by creating a similar ID
+        const testId = `${testObj.file}-${testObj.title}`.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-_]/g, '');
+        
+        // Check if we have analysis for this test
+        const analysis = this.aiAnalysisData.analyses[testId];
+        
+        if (analysis && analysis.aiAnalysis) {
+            testObj.aiAnalysis = {
+                analysis: analysis.aiAnalysis.analysis || '',
+                rootCause: analysis.aiAnalysis.rootCause || '',
+                confidence: analysis.aiAnalysis.confidence || 0,
+                suggestedFix: analysis.aiAnalysis.suggestedFix || null,
+                affectedFiles: analysis.aiAnalysis.affectedFiles || [],
+                testingRecommendations: analysis.aiAnalysis.testingRecommendations || '',
+                aiProvider: this.aiAnalysisData.aiProvider || 'AI',
+                model: this.aiAnalysisData.model || 'Unknown'
+            };
+        }
     }
 
     getCategoryFromTest(test, filePath) {

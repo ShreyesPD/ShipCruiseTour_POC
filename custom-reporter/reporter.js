@@ -361,7 +361,10 @@ function createTestRow(test) {
     
     tr.innerHTML = `
         <td>
-            <div class="test-name">${escapeHtml(test.title)}</div>
+            <div class="test-name">
+                ${escapeHtml(test.title)}
+                ${test.aiAnalysis ? '<span class="ai-indicator" title="AI Analysis Available"><i class="fas fa-robot"></i></span>' : ''}
+            </div>
             ${test.retries > 0 ? `<small style="color: var(--color-warning)">Retried ${test.retries} time(s)</small>` : ''}
         </td>
         <td>${escapeHtml(test.suite.split(' › ').pop())}</td>
@@ -566,10 +569,100 @@ function showTestDetails(testId) {
                 ` : ''}
             </div>
         ` : ''}
+        ${renderAIAnalysis(test)}
         ${renderTestArtifacts(test)}
     `;
     
     modal.classList.add('active');
+}
+
+/**
+ * Render AI analysis section
+ */
+function renderAIAnalysis(test) {
+    if (!test.aiAnalysis) {
+        return '';
+    }
+
+    const analysis = test.aiAnalysis;
+    const confidencePercent = Math.round(analysis.confidence * 100);
+    const confidenceClass = confidencePercent >= 80 ? 'high' : confidencePercent >= 50 ? 'medium' : 'low';
+
+    let html = `
+        <div class="ai-analysis-section">
+            <h4>
+                <i class="fas fa-robot"></i> AI Analysis 
+                <span class="ai-badge">${escapeHtml(analysis.aiProvider)} ${escapeHtml(analysis.model)}</span>
+                <span class="confidence-badge confidence-${confidenceClass}">${confidencePercent}% confidence</span>
+            </h4>
+    `;
+
+    if (analysis.analysis) {
+        html += `
+            <div class="ai-analysis-item">
+                <strong><i class="fas fa-info-circle"></i> What is this test about?</strong>
+                <p>${escapeHtml(analysis.analysis)}</p>
+            </div>
+        `;
+    }
+
+    if (analysis.rootCause) {
+        html += `
+            <div class="ai-analysis-item">
+                <strong><i class="fas fa-bug"></i> Why is it failing?</strong>
+                <p>${escapeHtml(analysis.rootCause)}</p>
+            </div>
+        `;
+    }
+
+    if (analysis.suggestedFix && analysis.suggestedFix.description) {
+        html += `
+            <div class="ai-analysis-item">
+                <strong><i class="fas fa-wrench"></i> How to fix it?</strong>
+                <p>${escapeHtml(analysis.suggestedFix.description)}</p>
+        `;
+
+        if (analysis.suggestedFix.changes && analysis.suggestedFix.changes.length > 0) {
+            html += `<div class="fix-changes">`;
+            analysis.suggestedFix.changes.forEach((change, idx) => {
+                html += `
+                    <div class="fix-change-item">
+                        <div class="fix-change-header">
+                            <strong>Change ${idx + 1}:</strong> ${escapeHtml(change.file)}
+                            <span class="fix-action-badge">${escapeHtml(change.action)}</span>
+                        </div>
+                        ${change.lineStart ? `<div class="fix-lines">Lines ${change.lineStart}${change.lineEnd ? '-' + change.lineEnd : ''}</div>` : ''}
+                    </div>
+                `;
+            });
+            html += `</div>`;
+        }
+
+        html += `</div>`;
+    }
+
+    if (analysis.affectedFiles && analysis.affectedFiles.length > 0) {
+        html += `
+            <div class="ai-analysis-item">
+                <strong><i class="fas fa-file-code"></i> Affected Files:</strong>
+                <ul class="affected-files-list">
+                    ${analysis.affectedFiles.map(file => `<li><code>${escapeHtml(file)}</code></li>`).join('')}
+                </ul>
+            </div>
+        `;
+    }
+
+    if (analysis.testingRecommendations) {
+        html += `
+            <div class="ai-analysis-item">
+                <strong><i class="fas fa-clipboard-check"></i> Testing Recommendations:</strong>
+                <p>${escapeHtml(analysis.testingRecommendations)}</p>
+            </div>
+        `;
+    }
+
+    html += `</div>`;
+    return html;
 }
 
 /**

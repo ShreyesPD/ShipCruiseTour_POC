@@ -387,6 +387,11 @@ async function analyzeWithAI() {
   
   const analysisResults = await orchestrator.errorAnalyzer.analyzeTestFailures(testResults);
   
+  // Save analysis for dashboard consumption
+  if (analysisResults && analysisResults.hasErrors) {
+    orchestrator.errorAnalyzer.saveAnalysisForDashboard(analysisResults);
+  }
+  
   return analysisResults;
 }
 

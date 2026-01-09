@@ -87,6 +87,14 @@ function buildDashboard() {
         }
     }
 
+    // Copy AI analysis if it exists
+    const AI_ANALYSIS_FILE = path.join(TARGET_DIR, 'ai-analysis.json');
+    if (fs.existsSync(AI_ANALYSIS_FILE)) {
+        console.log('✓ AI analysis already in target directory');
+    } else {
+        console.log('ℹ️  No AI analysis available yet (run tests with AI analysis to generate)');
+    }
+
     console.log('\n✨ Dashboard built successfully!');
     console.log(`\n📂 Location: ${TARGET_DIR}/index.html`);
     console.log('\n💡 To view the dashboard, run: npm run dashboard\n');
