@@ -25,7 +25,7 @@ class TestDataParser {
         this.suites = new Map();
         this.tests = [];
         this.categoryStats = new Map();
-        this.aiAnalysisData = null;
+        // Don't reset aiAnalysisData here - it should persist after loading
     }
 
     /**
@@ -56,13 +56,16 @@ class TestDataParser {
      */
     async loadAIAnalysis() {
         try {
-            const response = await fetch('../ai-analysis.json');
+            const response = await fetch('ai-analysis.json');
             if (response.ok) {
                 this.aiAnalysisData = await response.json();
-                console.log('✅ Loaded AI analysis data:', this.aiAnalysisData.analyzedFailures, 'analyses');
+                console.log('✅ Loaded AI analysis data:', Object.keys(this.aiAnalysisData.analyses || {}).length, 'analyses');
+            } else {
+                console.log('ℹ️  AI analysis file not found (status:', response.status, ')');
+                this.aiAnalysisData = null;
             }
         } catch (error) {
-            console.log('ℹ️  No AI analysis data available');
+            console.log('ℹ️  No AI analysis data available:', error.message);
             this.aiAnalysisData = null;
         }
     }

@@ -110,31 +110,31 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 24908,
+                      "duration": 11268,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#btnLogin')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 2\u001b[39m\n\n\u001b[32m- shreyes\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+                                     Shreyes\u001b[43m                                \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#btnLogin')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" id=\"btnLogin\" aria-expanded=\"true\" data-bs-toggle=\"dropdown\" class=\"btn dropdown-toggle btn-login show\">↵                                    Shreyes     …</button>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m                                    Shreyes                                \"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#btnLogin')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 2\u001b[39m\n\n\u001b[32m- shreyes\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+                                     Shreyes\u001b[43m                                \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#btnLogin')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" id=\"btnLogin\" aria-expanded=\"true\" data-bs-toggle=\"dropdown\" class=\"btn dropdown-toggle btn-login show\">↵                                    Shreyes     …</button>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m                                    Shreyes                                \"\u001b[22m\n\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:16:26",
+                        "message": "ReferenceError: toContainText is not defined",
+                        "stack": "ReferenceError: toContainText is not defined\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:16:1",
                         "location": {
                           "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                          "column": 26,
+                          "column": 1,
                           "line": 16
                         },
-                        "snippet": "\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m button\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.dropdown-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(button)\u001b[33m.\u001b[39mtoContainText(creds\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39msplit(\u001b[32m'@'\u001b[39m)[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39msplit(\u001b[32m'.'\u001b[39m)[\u001b[35m0\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test(\u001b[32m'reservation page requires authentication'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m button\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.dropdown-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m toContainText(creds\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39msplit(\u001b[32m'@'\u001b[39m)[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39msplit(\u001b[32m'.'\u001b[39m)[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mtoLowerCase())\n \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test(\u001b[32m'reservation page requires authentication'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                            "column": 26,
+                            "column": 1,
                             "line": 16
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#btnLogin')\nTimeout: 5000ms\n\u001b[32m- Expected substring  - 1\u001b[39m\n\u001b[31m+ Received string     + 2\u001b[39m\n\n\u001b[32m- shreyes\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+                                     Shreyes\u001b[43m                                \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#btnLogin')\u001b[22m\n\u001b[2m    9 × locator resolved to <button type=\"button\" id=\"btnLogin\" aria-expanded=\"true\" data-bs-toggle=\"dropdown\" class=\"btn dropdown-toggle btn-login show\">↵                                    Shreyes     …</button>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m                                    Shreyes                                \"\u001b[22m\n\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m button\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.dropdown-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(button)\u001b[33m.\u001b[39mtoContainText(creds\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39msplit(\u001b[32m'@'\u001b[39m)[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39msplit(\u001b[32m'.'\u001b[39m)[\u001b[35m0\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test(\u001b[32m'reservation page requires authentication'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:16:26\u001b[22m"
+                          "message": "ReferenceError: toContainText is not defined\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m button\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.dropdown-menu'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m toContainText(creds\u001b[33m.\u001b[39musername\u001b[33m.\u001b[39msplit(\u001b[32m'@'\u001b[39m)[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39msplit(\u001b[32m'.'\u001b[39m)[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mtoLowerCase())\n \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test(\u001b[32m'reservation page requires authentication'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:16:1\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:30:14.974Z",
+                      "startTime": "2026-01-09T11:17:09.287Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -155,7 +155,7 @@
                       ],
                       "errorLocation": {
                         "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                        "column": 26,
+                        "column": 1,
                         "line": 16
                       }
                     }
@@ -184,12 +184,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 12965,
+                      "duration": 9352,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:30:14.892Z",
+                      "startTime": "2026-01-09T11:17:09.303Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -204,7 +204,7 @@
             },
             {
               "title": "logged-in user can access reservation page",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -217,58 +217,18 @@
                     {
                       "workerIndex": 2,
                       "parallelIndex": 2,
-                      "status": "failed",
-                      "duration": 30484,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1:has-text(\"Mes réservations\")')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1:has-text(\"Mes réservations\")')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1:has-text(\"Mes réservations\")')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1:has-text(\"Mes réservations\")')\u001b[22m\n\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:27:63",
-                        "location": {
-                          "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                          "column": 63,
-                          "line": 27
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m loginViaUI(page)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/reservation'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h1:has-text(\"Mes réservations\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m   test(\u001b[32m'user can logout from navbar dropdown'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                            "column": 63,
-                            "line": 27
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1:has-text(\"Mes réservations\")')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1:has-text(\"Mes réservations\")')\u001b[22m\n\n\n\u001b[0m \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m loginViaUI(page)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/reservation'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h1:has-text(\"Mes réservations\")'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m   test(\u001b[32m'user can logout from navbar dropdown'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:27:63\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 11657,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:30:15.387Z",
+                      "startTime": "2026-01-09T11:17:09.362Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\authenticated-Authenticate-190c9-can-access-reservation-page-frontend\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\authenticated-Authenticate-190c9-can-access-reservation-page-frontend\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\authenticated-Authenticate-190c9-can-access-reservation-page-frontend\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                        "column": 63,
-                        "line": 27
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "6606e9cb1071ef9d9401-1c3fc6be9bf34c01f326",
@@ -278,7 +238,7 @@
             },
             {
               "title": "user can logout from navbar dropdown",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -291,50 +251,18 @@
                     {
                       "workerIndex": 3,
                       "parallelIndex": 3,
-                      "status": "timedOut",
-                      "duration": 32775,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                            "column": 24,
-                            "line": 33
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Login/i\u001b[39m\nReceived string:  \u001b[31m\"http://localhost:8000/\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    7 × unexpected value \"http://localhost:8000/\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 31 |\u001b[39m     \u001b[36mawait\u001b[39m loginViaUI(page)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m logoutViaUI(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/Login/i\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:33:24\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 18887,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:30:15.150Z",
+                      "startTime": "2026-01-09T11:17:09.315Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\authenticated-Authenticate-fe48e-logout-from-navbar-dropdown-frontend\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\authenticated-Authenticate-fe48e-logout-from-navbar-dropdown-frontend\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\authenticated-Authenticate-fe48e-logout-from-navbar-dropdown-frontend\\error-context.md"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "6606e9cb1071ef9d9401-1e1cadfac881d5cd9484",
@@ -366,31 +294,31 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 16966,
+                      "duration": 14079,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:41:29",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\u001b[2m    - waiting for\" http://localhost:8000/Cruises\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://localhost:8000/Cruises\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\u001b[2m    - waiting for\" http://localhost:8000/Cruises\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://localhost:8000/Cruises\"\u001b[22m\n\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:41:25",
                         "location": {
                           "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                          "column": 29,
+                          "column": 25,
                           "line": 41
                         },
-                        "snippet": "\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/Cuirses'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m     \u001b[36mconst\u001b[39m firstCard \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesBox'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(firstCard)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m firstCard\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mconst\u001b[39m detailContainer \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesDetailContainer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 39 |\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/Cruises'\u001b[39m)\n \u001b[90m 40 |\u001b[39m     \u001b[36mconst\u001b[39m firstCard \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesBox'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m \u001b[36mawait\u001b[39m expect(firstCard)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m firstCard\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mconst\u001b[39m detailContainer \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesDetailContainer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                            "column": 29,
+                            "column": 25,
                             "line": 41
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/Cuirses'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m     \u001b[36mconst\u001b[39m firstCard \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesBox'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(firstCard)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m firstCard\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mconst\u001b[39m detailContainer \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesDetailContainer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:41:29\u001b[22m"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\u001b[2m    - waiting for\" http://localhost:8000/Cruises\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://localhost:8000/Cruises\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 39 |\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/Cruises'\u001b[39m)\n \u001b[90m 40 |\u001b[39m     \u001b[36mconst\u001b[39m firstCard \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesBox'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m \u001b[36mawait\u001b[39m expect(firstCard)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m firstCard\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mconst\u001b[39m detailContainer \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesDetailContainer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:41:25\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:30:28.579Z",
+                      "startTime": "2026-01-09T11:17:18.943Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -411,7 +339,7 @@
                       ],
                       "errorLocation": {
                         "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js",
-                        "column": 29,
+                        "column": 25,
                         "line": 41
                       }
                     }
@@ -440,7 +368,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "timedOut",
-                      "duration": 50802,
+                      "duration": 42580,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -461,7 +389,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:30:47.245Z",
+                      "startTime": "2026-01-09T11:17:23.783Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -520,15 +448,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 1,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 10632,
+                      "duration": 4383,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:30:50.854Z",
+                      "startTime": "2026-01-09T11:17:21.362Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -554,15 +482,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 35007,
+                      "duration": 4395,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:30:54.554Z",
+                      "startTime": "2026-01-09T11:17:25.805Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -588,15 +516,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 33418,
+                      "duration": 6494,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:30:57.067Z",
+                      "startTime": "2026-01-09T11:17:28.549Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -622,31 +550,34 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 1,
-                      "status": "timedOut",
-                      "duration": 35726,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 24082,
                       "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js:68:34",
+                        "location": {
+                          "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js",
+                          "column": 34,
+                          "line": 68
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'textarea[name=\"message\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Mock submission for testing.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m     \u001b[36mconst\u001b[39m responsePromise \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForResponse(\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m       (resp) \u001b[33m=>\u001b[39m resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'send-email-mock.php'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 70 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 71 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
                         {
                           "location": {
                             "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js",
                             "column": 34,
                             "line": 68
                           },
-                          "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n\n\u001b[0m \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'textarea[name=\"message\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Mock submission for testing.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m     \u001b[36mconst\u001b[39m responsePromise \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForResponse(\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m       (resp) \u001b[33m=>\u001b[39m resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'send-email-mock.php'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 70 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 71 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js:68:34\u001b[22m"
+                          "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n\n\u001b[0m \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'textarea[name=\"message\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Mock submission for testing.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m     \u001b[36mconst\u001b[39m responsePromise \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForResponse(\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m       (resp) \u001b[33m=>\u001b[39m resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'send-email-mock.php'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 70 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 71 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js:68:34\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:02.561Z",
+                      "startTime": "2026-01-09T11:17:30.265Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -664,7 +595,12 @@
                           "contentType": "text/markdown",
                           "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\contact-Contact-Page-Tests-e82c8-ntact-form-via-mock-handler-frontend\\error-context.md"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js",
+                        "column": 34,
+                        "line": 68
+                      }
                     }
                   ],
                   "status": "unexpected"
@@ -688,43 +624,34 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 2,
-                      "status": "timedOut",
-                      "duration": 31555,
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 24843,
                       "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"",
+                        "stack": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js:87:34",
+                        "location": {
+                          "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js",
+                          "column": 34,
+                          "line": 87
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 85 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'textarea[name=\"message\"]'\u001b[39m\u001b[33m,\u001b[39m uniqueMessage)\u001b[33m;\u001b[39m\n \u001b[90m 86 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     \u001b[36mconst\u001b[39m responsePromise \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForResponse(\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m       (resp) \u001b[33m=>\u001b[39m resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'send-email.php'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 89 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 90 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
                           "location": {
                             "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js",
                             "column": 34,
                             "line": 87
                           },
-                          "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n\n\u001b[0m \u001b[90m 85 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'textarea[name=\"message\"]'\u001b[39m\u001b[33m,\u001b[39m uniqueMessage)\u001b[33m;\u001b[39m\n \u001b[90m 86 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     \u001b[36mconst\u001b[39m responsePromise \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForResponse(\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m       (resp) \u001b[33m=>\u001b[39m resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'send-email.php'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 89 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 90 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js:87:34\u001b[22m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js",
-                            "column": 34,
-                            "line": 87
-                          },
-                          "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n\n\u001b[0m \u001b[90m 85 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'textarea[name=\"message\"]'\u001b[39m\u001b[33m,\u001b[39m uniqueMessage)\u001b[33m;\u001b[39m\n \u001b[90m 86 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     \u001b[36mconst\u001b[39m responsePromise \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForResponse(\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m       (resp) \u001b[33m=>\u001b[39m resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'send-email.php'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 89 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 90 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js:87:34\u001b[22m"
+                          "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n\n\u001b[0m \u001b[90m 85 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'textarea[name=\"message\"]'\u001b[39m\u001b[33m,\u001b[39m uniqueMessage)\u001b[33m;\u001b[39m\n \u001b[90m 86 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     \u001b[36mconst\u001b[39m responsePromise \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForResponse(\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m       (resp) \u001b[33m=>\u001b[39m resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'send-email.php'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 89 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 90 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js:87:34\u001b[22m"
                         }
                       ],
                       "stdout": [],
-                      "stderr": [
-                        {
-                          "text": "(node:9224) PromiseRejectionHandledWarning: Promise rejection was handled asynchronously (rejection id: 9)\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
-                        }
-                      ],
+                      "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:30.563Z",
+                      "startTime": "2026-01-09T11:17:40.049Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -733,11 +660,21 @@
                           "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\contact-Contact-Page-Tests-078fc--real-handler-and-log-entry-frontend\\test-failed-1.png"
                         },
                         {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\contact-Contact-Page-Tests-078fc--real-handler-and-log-entry-frontend\\video.webm"
+                        },
+                        {
                           "name": "error-context",
                           "contentType": "text/markdown",
                           "path": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\test-results\\contact-Contact-Page-Tests-078fc--real-handler-and-log-entry-frontend\\error-context.md"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\contact.spec.js",
+                        "column": 34,
+                        "line": 87
+                      }
                     }
                   ],
                   "status": "unexpected"
@@ -778,15 +715,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 9703,
+                      "duration": 864,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:31.054Z",
+                      "startTime": "2026-01-09T11:17:35.105Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -812,15 +749,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2595,
+                      "duration": 2374,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:44.229Z",
+                      "startTime": "2026-01-09T11:17:36.016Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -846,15 +783,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 0,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5311,
+                      "duration": 2088,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:44.610Z",
+                      "startTime": "2026-01-09T11:17:38.542Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -880,15 +817,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1929,
+                      "duration": 2867,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:40.888Z",
+                      "startTime": "2026-01-09T11:17:40.725Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -914,15 +851,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2354,
+                      "duration": 6144,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:42.907Z",
+                      "startTime": "2026-01-09T11:17:43.736Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -965,15 +902,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 27756,
+                      "duration": 16833,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:45.354Z",
+                      "startTime": "2026-01-09T11:17:50.052Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -999,15 +936,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 25524,
+                      "duration": 4163,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:47.803Z",
+                      "startTime": "2026-01-09T11:18:06.244Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1033,15 +970,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 0,
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 24080,
+                      "duration": 4812,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:31:51.381Z",
+                      "startTime": "2026-01-09T11:18:09.234Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1067,15 +1004,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 12017,
+                      "duration": 4295,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:13.215Z",
+                      "startTime": "2026-01-09T11:18:06.971Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1102,14 +1039,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12476,
+                      "duration": 4462,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:13.466Z",
+                      "startTime": "2026-01-09T11:18:10.273Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1152,15 +1089,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 10,
+                      "workerIndex": 6,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1557,
+                      "duration": 1280,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:22.597Z",
+                      "startTime": "2026-01-09T11:18:10.801Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1186,15 +1123,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 0,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2145,
+                      "duration": 3720,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:15.616Z",
+                      "startTime": "2026-01-09T11:18:11.326Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1220,15 +1157,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 0,
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5174,
+                      "duration": 4810,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:17.945Z",
+                      "startTime": "2026-01-09T11:18:12.132Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1254,15 +1191,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 0,
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5112,
+                      "duration": 1760,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:23.205Z",
+                      "startTime": "2026-01-09T11:18:14.741Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1305,15 +1242,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5126,
+                      "duration": 1211,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:25.316Z",
+                      "startTime": "2026-01-09T11:18:15.120Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1339,15 +1276,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 2,
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1912,
+                      "duration": 1473,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:25.994Z",
+                      "startTime": "2026-01-09T11:18:15.374Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1373,15 +1310,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 1,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 7024,
+                      "duration": 2081,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:26.029Z",
+                      "startTime": "2026-01-09T11:18:16.375Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1407,15 +1344,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 2,
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2199,
+                      "duration": 1050,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:27.980Z",
+                      "startTime": "2026-01-09T11:18:16.572Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1458,34 +1395,34 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 9,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 619,
+                      "duration": 196,
                       "error": {
                         "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
-                        "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:22)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:31:21",
+                        "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:115)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:31:21",
                         "location": {
                           "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js",
-                          "column": 22,
+                          "column": 115,
                           "line": 15
                         },
-                        "snippet": "\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) { \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`API request failed with status: ${response.status}`\u001b[39m)\u001b[33m;\u001b[39m } \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js",
-                            "column": 22,
+                            "column": 115,
                             "line": 15
                           },
-                          "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n\n\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:22)\u001b[22m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:31:21\u001b[22m"
+                          "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n\n\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) { \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`API request failed with status: ${response.status}`\u001b[39m)\u001b[33m;\u001b[39m } \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:115)\u001b[22m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:31:21\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:33.172Z",
+                      "startTime": "2026-01-09T11:18:19.182Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1496,7 +1433,7 @@
                       ],
                       "errorLocation": {
                         "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js",
-                        "column": 22,
+                        "column": 115,
                         "line": 15
                       }
                     }
@@ -1522,34 +1459,34 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 12,
+                      "workerIndex": 10,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 448,
+                      "duration": 187,
                       "error": {
                         "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
-                        "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:22)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:36:21",
+                        "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:115)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:36:21",
                         "location": {
                           "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js",
-                          "column": 22,
+                          "column": 115,
                           "line": 15
                         },
-                        "snippet": "\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) { \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`API request failed with status: ${response.status}`\u001b[39m)\u001b[33m;\u001b[39m } \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js",
-                            "column": 22,
+                            "column": 115,
                             "line": 15
                           },
-                          "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n\n\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:22)\u001b[22m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:36:21\u001b[22m"
+                          "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n\n\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) { \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`API request failed with status: ${response.status}`\u001b[39m)\u001b[33m;\u001b[39m } \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:115)\u001b[22m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:36:21\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:34.744Z",
+                      "startTime": "2026-01-09T11:18:19.256Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1560,7 +1497,7 @@
                       ],
                       "errorLocation": {
                         "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js",
-                        "column": 22,
+                        "column": 115,
                         "line": 15
                       }
                     }
@@ -1586,15 +1523,15 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 11,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 232,
+                      "duration": 121,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:35.156Z",
+                      "startTime": "2026-01-09T11:18:19.853Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1620,34 +1557,34 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 1,
+                      "workerIndex": 12,
+                      "parallelIndex": 3,
                       "status": "failed",
-                      "duration": 418,
+                      "duration": 168,
                       "error": {
                         "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
-                        "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:22)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:57:21",
+                        "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:115)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:57:21",
                         "location": {
                           "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js",
-                          "column": 22,
+                          "column": 115,
                           "line": 15
                         },
-                        "snippet": "\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) { \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`API request failed with status: ${response.status}`\u001b[39m)\u001b[33m;\u001b[39m } \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js",
-                            "column": 22,
+                            "column": 115,
                             "line": 15
                           },
-                          "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n\n\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:22)\u001b[22m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:57:21\u001b[22m"
+                          "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n\n\u001b[0m \u001b[90m 13 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m \u001b[36mconst\u001b[39m responseData \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) { \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`API request failed with status: ${response.status}`\u001b[39m)\u001b[33m;\u001b[39m } \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:115)\u001b[22m\n\u001b[2m    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:57:21\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:37.887Z",
+                      "startTime": "2026-01-09T11:18:20.614Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1658,7 +1595,7 @@
                       ],
                       "errorLocation": {
                         "file": "C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js",
-                        "column": 22,
+                        "column": 115,
                         "line": 15
                       }
                     }
@@ -1692,15 +1629,15 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 15,
+                      "workerIndex": 13,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 207,
+                      "duration": 102,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:38.875Z",
+                      "startTime": "2026-01-09T11:18:21.230Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1726,15 +1663,15 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 14,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 183,
+                      "duration": 105,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:35.527Z",
+                      "startTime": "2026-01-09T11:18:21.328Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1760,15 +1697,15 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 2,
+                      "workerIndex": 11,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 200,
+                      "duration": 45,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T10:32:40.065Z",
+                      "startTime": "2026-01-09T11:18:20.029Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1788,11 +1725,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-09T10:30:10.586Z",
-    "duration": 149867.069,
-    "expected": 26,
+    "startTime": "2026-01-09T11:17:07.610Z",
+    "duration": 73907.442,
+    "expected": 28,
     "skipped": 0,
-    "unexpected": 10,
+    "unexpected": 8,
     "flaky": 0
   }
 }

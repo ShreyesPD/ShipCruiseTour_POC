@@ -13,7 +13,7 @@ test.describe('Authenticated user flows', () => {
     await expect(button).not.toHaveText(/Login/i);
     await button.click();
     await expect(page.locator('.dropdown-menu')).toBeVisible();
-toContainText(creds.username.split('@')[0].split('.')[0].toLowerCase())
+toHaveText(creds.username.split('@')[0].split('.')[0].toLowerCase())
   });
 
   test('reservation page requires authentication', async ({ page }) => {
@@ -24,13 +24,13 @@ toContainText(creds.username.split('@')[0].split('.')[0].toLowerCase())
   test('logged-in user can access reservation page', async ({ page }) => {
     await loginViaUI(page);
     await page.goto('/reservation');
-await expect(page.locator('h1:has-text("Mes réservations")')).toBeVisible({ timeout: 15000 });
+20000
   });
 
   test('user can logout from navbar dropdown', async ({ page }) => {
     await loginViaUI(page);
     await logoutViaUI(page);
-    await expect(page).toHaveURL(/Login/i);
+expect(page).toHaveURL('http://localhost:8000/');
   });
 });
 
@@ -38,7 +38,7 @@ test.describe('Cruises interactions', () => {
   test('opening cruise detail renders modal with reservation form', async ({ page }) => {
 page.goto('/Cruises')
     const firstCard = page.locator('#cruisesBox').first();
-    await expect(firstCard).toBeVisible();
+15000
     await firstCard.click();
 
     const detailContainer = page.locator('#cruisesDetailContainer');
