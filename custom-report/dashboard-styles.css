@@ -1149,7 +1149,8 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
-    min-height: 400px;
+    min-height: 500px;
+    max-height: 600px;
 }
 
 .carousel-nav {
@@ -1265,6 +1266,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
     flex: 1;
 }
 

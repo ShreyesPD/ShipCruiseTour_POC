@@ -259,9 +259,25 @@ class TestDataParser {
     }
 
     getCategoryFromTest(test, filePath) {
+        // Check for smoke test tags or annotations
+        if (test && test.tags) {
+            const tags = Array.isArray(test.tags) ? test.tags : [test.tags];
+            if (tags.some(tag => tag.toLowerCase().includes('smoke'))) {
+                return 'Smoke';
+            }
+        }
+        
+        // Check test title for smoke indicator
+        if (test && test.title && test.title.toLowerCase().includes('@smoke')) {
+            return 'Smoke';
+        }
+        
         // First try to get category from projectName metadata
         if (test && test.projectName) {
             const projectName = test.projectName.toLowerCase();
+            if (projectName === 'smoke') {
+                return 'Smoke';
+            }
             if (projectName === 'frontend') {
                 return 'Frontend';
             }
@@ -275,6 +291,9 @@ class TestDataParser {
             return 'Other';
         }
         const normalized = filePath.replace(/\\/g, '/').toLowerCase();
+        if (normalized.includes('smoke')) {
+            return 'Smoke';
+        }
         if (normalized.includes('frontend')) {
             return 'Frontend';
         }

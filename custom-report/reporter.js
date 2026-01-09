@@ -43,14 +43,17 @@ function updateScopeCounts() {
     const allStats = parser.getScopeStats('all');
     const frontendStats = parser.getScopeStats('frontend');
     const backendStats = parser.getScopeStats('backend');
+    const smokeStats = parser.getScopeStats('smoke');
 
     const allNode = document.getElementById('scopeAllCount');
     const feNode = document.getElementById('scopeFrontendCount');
     const beNode = document.getElementById('scopeBackendCount');
+    const smokeNode = document.getElementById('scopeSmokeCount');
 
     if (allNode) allNode.textContent = allStats.total ?? 0;
     if (feNode) feNode.textContent = frontendStats.total ?? 0;
     if (beNode) beNode.textContent = backendStats.total ?? 0;
+    if (smokeNode) smokeNode.textContent = smokeStats.total ?? 0;
 }
 
 /**
@@ -370,7 +373,7 @@ function createAISummaryCard(test) {
                     <i class="fas fa-info-circle"></i> What & Why
                 </div>
                 <div class="ai-summary-item-text">
-                    ${analysis.analysis ? escapeHtml(analysis.analysis).substring(0, 200) + (analysis.analysis.length > 200 ? '...' : '') : 'No analysis available'}
+                    ${analysis.analysis ? escapeHtml(analysis.analysis) : 'No analysis available'}
                 </div>
             </div>
             
@@ -380,7 +383,7 @@ function createAISummaryCard(test) {
                         <i class="fas fa-bug"></i> Root Cause
                     </div>
                     <div class="ai-summary-item-text">
-                        ${escapeHtml(analysis.rootCause).substring(0, 150) + (analysis.rootCause.length > 150 ? '...' : '')}
+                        ${escapeHtml(analysis.rootCause)}
                     </div>
                 </div>
             ` : ''}
@@ -391,7 +394,7 @@ function createAISummaryCard(test) {
                         <i class="fas fa-wrench"></i> Suggested Fix
                     </div>
                     <div class="ai-summary-item-text">
-                        ${escapeHtml(analysis.suggestedFix.description).substring(0, 150) + (analysis.suggestedFix.description.length > 150 ? '...' : '')}
+                        ${escapeHtml(analysis.suggestedFix.description)}
                     </div>
                 </div>
             ` : ''}
@@ -402,19 +405,12 @@ function createAISummaryCard(test) {
                         <i class="fas fa-file-code"></i> Affected Files
                     </div>
                     <div class="ai-summary-files">
-                        ${analysis.affectedFiles.slice(0, 2).map(file => 
+                        ${analysis.affectedFiles.map(file => 
                             `<code>${escapeHtml(file)}</code>`
                         ).join('')}
-                        ${analysis.affectedFiles.length > 2 ? `<span class="ai-summary-more">+${analysis.affectedFiles.length - 2} more</span>` : ''}
                     </div>
                 </div>
             ` : ''}
-        </div>
-        
-        <div class="ai-summary-card-footer">
-            <button class="btn-view-details" onclick="showTestDetails('${test.id}')">
-                <i class="fas fa-eye"></i> View Full Analysis
-            </button>
         </div>
     `;
     

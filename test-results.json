@@ -110,7 +110,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 11981,
+                      "duration": 11878,
                       "error": {
                         "message": "ReferenceError: toHaveText is not defined",
                         "stack": "ReferenceError: toHaveText is not defined\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\frontend\\authenticated.spec.js:16:1",
@@ -134,7 +134,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:35:34.258Z",
+                      "startTime": "2026-01-09T11:46:38.082Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -184,12 +184,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 7333,
+                      "duration": 7872,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:35:34.220Z",
+                      "startTime": "2026-01-09T11:46:38.091Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -218,12 +218,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 11595,
+                      "duration": 11598,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:35:34.255Z",
+                      "startTime": "2026-01-09T11:46:38.098Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -252,12 +252,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 20627,
+                      "duration": 20302,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:35:34.225Z",
+                      "startTime": "2026-01-09T11:46:38.174Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -294,7 +294,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "timedOut",
-                      "duration": 60033,
+                      "duration": 60063,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -318,7 +318,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:35:41.980Z",
+                      "startTime": "2026-01-09T11:46:46.510Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -358,7 +358,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "timedOut",
-                      "duration": 59653,
+                      "duration": 58936,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -379,7 +379,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:35:46.238Z",
+                      "startTime": "2026-01-09T11:46:50.197Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -441,12 +441,12 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5510,
+                      "duration": 4508,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:35:49.249Z",
+                      "startTime": "2026-01-09T11:46:53.174Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -475,12 +475,12 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9947,
+                      "duration": 7257,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:35:55.070Z",
+                      "startTime": "2026-01-09T11:46:58.009Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -509,12 +509,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 10115,
+                      "duration": 7441,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:35:55.212Z",
+                      "startTime": "2026-01-09T11:46:58.997Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -543,7 +543,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "timedOut",
-                      "duration": 41161,
+                      "duration": 42750,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -564,7 +564,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:05.219Z",
+                      "startTime": "2026-01-09T11:47:05.454Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -609,7 +609,7 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "timedOut",
-                      "duration": 40605,
+                      "duration": 41956,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -630,7 +630,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:05.395Z",
+                      "startTime": "2026-01-09T11:47:06.518Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -692,12 +692,12 @@
                       "workerIndex": 5,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 996,
+                      "duration": 1258,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:46.541Z",
+                      "startTime": "2026-01-09T11:47:50.639Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -724,14 +724,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1798,
+                      "duration": 2003,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:48.843Z",
+                      "startTime": "2026-01-09T11:47:51.536Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -760,12 +760,12 @@
                       "workerIndex": 7,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1855,
+                      "duration": 2027,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:48.990Z",
+                      "startTime": "2026-01-09T11:47:51.579Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -792,14 +792,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 0,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2143,
+                      "duration": 2295,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:49.414Z",
+                      "startTime": "2026-01-09T11:47:52.444Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -828,12 +828,12 @@
                       "workerIndex": 5,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1419,
+                      "duration": 1657,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:47.917Z",
+                      "startTime": "2026-01-09T11:47:52.262Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -879,12 +879,12 @@
                       "workerIndex": 5,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4874,
+                      "duration": 6251,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:49.513Z",
+                      "startTime": "2026-01-09T11:47:53.971Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -911,14 +911,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5787,
+                      "duration": 5693,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:51.062Z",
+                      "startTime": "2026-01-09T11:47:54.095Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -947,12 +947,12 @@
                       "workerIndex": 7,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5781,
+                      "duration": 5990,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:51.296Z",
+                      "startTime": "2026-01-09T11:47:54.182Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -979,14 +979,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 0,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5565,
+                      "duration": 5970,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:52.087Z",
+                      "startTime": "2026-01-09T11:47:55.324Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1012,15 +1012,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 1,
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6685,
+                      "duration": 6891,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:54.492Z",
+                      "startTime": "2026-01-09T11:47:59.836Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1063,15 +1063,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 2,
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1133,
+                      "duration": 1643,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:56.920Z",
+                      "startTime": "2026-01-09T11:48:00.222Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1097,15 +1097,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 3,
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1358,
+                      "duration": 1382,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:57.153Z",
+                      "startTime": "2026-01-09T11:48:00.268Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1132,14 +1132,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 0,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3630,
+                      "duration": 3509,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:57.735Z",
+                      "startTime": "2026-01-09T11:48:01.347Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1165,15 +1165,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 2,
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2076,
+                      "duration": 2356,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:58.118Z",
+                      "startTime": "2026-01-09T11:48:01.736Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1219,12 +1219,12 @@
                       "workerIndex": 7,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1635,
+                      "duration": 1923,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:36:58.678Z",
+                      "startTime": "2026-01-09T11:48:01.925Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1250,15 +1250,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 2,
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1385,
+                      "duration": 1702,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:00.270Z",
+                      "startTime": "2026-01-09T11:48:03.903Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1284,15 +1284,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 3,
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2379,
+                      "duration": 2590,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:00.481Z",
+                      "startTime": "2026-01-09T11:48:04.161Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1318,15 +1318,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 1,
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1423,
+                      "duration": 1546,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:01.288Z",
+                      "startTime": "2026-01-09T11:48:04.949Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1370,9 +1370,9 @@
                   "results": [
                     {
                       "workerIndex": 9,
-                      "parallelIndex": 0,
+                      "parallelIndex": 3,
                       "status": "failed",
-                      "duration": 302,
+                      "duration": 221,
                       "error": {
                         "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
                         "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:115)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:31:21",
@@ -1396,7 +1396,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:04.125Z",
+                      "startTime": "2026-01-09T11:48:08.669Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1436,7 +1436,7 @@
                       "workerIndex": 10,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 305,
+                      "duration": 216,
                       "error": {
                         "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
                         "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:115)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:36:21",
@@ -1460,7 +1460,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:04.309Z",
+                      "startTime": "2026-01-09T11:48:09.081Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1497,15 +1497,15 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 1,
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 215,
+                      "duration": 141,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:05.609Z",
+                      "startTime": "2026-01-09T11:48:09.467Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1531,10 +1531,10 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 3,
+                      "workerIndex": 11,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 288,
+                      "duration": 257,
                       "error": {
                         "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
                         "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:15:115)\n    at C:\\Users\\ShreyesPrabhuDesai\\PersProjects\\ShipCruiseTour_POC\\tests\\backend\\api.spec.js:57:21",
@@ -1558,7 +1558,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:06.038Z",
+                      "startTime": "2026-01-09T11:48:09.350Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1604,14 +1604,14 @@
                   "results": [
                     {
                       "workerIndex": 13,
-                      "parallelIndex": 0,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 247,
+                      "duration": 131,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:07.502Z",
+                      "startTime": "2026-01-09T11:48:11.025Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1640,12 +1640,12 @@
                       "workerIndex": 14,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 291,
+                      "duration": 109,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:07.522Z",
+                      "startTime": "2026-01-09T11:48:11.331Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1671,15 +1671,15 @@
                   "projectName": "backend",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 1,
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 68,
+                      "duration": 47,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T11:37:05.976Z",
+                      "startTime": "2026-01-09T11:48:09.700Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1699,8 +1699,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-09T11:35:32.380Z",
-    "duration": 95664.208,
+    "startTime": "2026-01-09T11:46:36.026Z",
+    "duration": 95508.492,
     "expected": 28,
     "skipped": 0,
     "unexpected": 8,
