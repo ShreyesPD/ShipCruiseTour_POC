@@ -337,3 +337,94 @@ NOTES:
 ================================================================================
 END OF DOCUMENTATION ENTRY
 ================================================================================
+
+Date: Friday, January 09, 2026, 14:40:45 IST
+
+================================================================================
+DATABASE CONNECTION ERROR FIX
+================================================================================
+
+TASK: Fix MySQL database connection error - "Access denied for user 'root'@'localhost'"
+
+ISSUE IDENTIFIED:
+-----------------
+The application was failing to connect to MySQL database with error:
+"Fatal error: Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES)"
+
+ROOT CAUSE:
+-----------
+The database configuration in website/app/Config/config.php had a hardcoded password:
+- PASS = "Spd7890&*()"
+
+However, the MySQL root user on the local system was configured without a password (or with a different password), causing authentication failure.
+
+CHANGES MADE:
+-------------
+
+1. Database Configuration Update:
+   - File: website/app/Config/config.php
+   - Changed: const PASS = "Spd7890&*()";
+   - To: const PASS = "";
+   - Reason: MySQL root user on localhost connects without password
+
+2. Database Verification:
+   - Verified MySQL is installed and running (version 9.5.0)
+   - Confirmed database 'shipcruisetour' exists
+   - Verified all required tables are present:
+     * chambre
+     * countries
+     * croisière
+     * cruiseitinery
+     * navire
+     * port
+     * réservation
+     * typerom
+     * user
+
+3. Connection Testing:
+   - Tested MySQL connection without password: ✓ Success
+   - Tested MySQL connection with old password: ✗ Failed
+   - Verified config file loads correctly with new settings
+
+TECHNICAL DETAILS:
+------------------
+- Database Host: localhost
+- Database User: root
+- Database Password: (empty)
+- Database Name: shipcruisetour
+- MySQL Version: 9.5.0 (Homebrew)
+- Connection Method: mysqli via MysqliDb library
+
+FILES MODIFIED:
+---------------
+1. website/app/Config/config.php
+   - Line 18: Updated PASS constant from "Spd7890&*()" to ""
+
+VERIFICATION:
+-------------
+✓ MySQL connection successful without password
+✓ Database 'shipcruisetour' exists and accessible
+✓ All required tables present in database
+✓ Configuration file updated and verified
+✓ PHP can load configuration constants correctly
+
+RESULT:
+-------
+✅ Database connection error resolved
+✅ Application can now connect to MySQL database successfully
+✅ No more "Access denied" errors
+
+NOTES:
+------
+- For production environments, it's recommended to:
+  1. Create a dedicated database user with appropriate permissions
+  2. Use a strong password
+  3. Store credentials in environment variables or secure config files
+  4. Never commit passwords to version control
+
+- Current setup uses root user without password for local development only
+- Database schema is already imported and tables are populated
+
+================================================================================
+END OF DOCUMENTATION ENTRY
+================================================================================

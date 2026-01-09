@@ -110,7 +110,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "timedOut",
-                      "duration": 30656,
+                      "duration": 30535,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -131,7 +131,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:30.321Z",
+                      "startTime": "2026-01-09T09:11:27.403Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -176,12 +176,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 578,
+                      "duration": 1556,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:30.322Z",
+                      "startTime": "2026-01-09T09:11:27.402Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -210,7 +210,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "timedOut",
-                      "duration": 30583,
+                      "duration": 30562,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -231,7 +231,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:30.319Z",
+                      "startTime": "2026-01-09T09:11:27.397Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -276,7 +276,7 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "timedOut",
-                      "duration": 30638,
+                      "duration": 30544,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -297,7 +297,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:30.314Z",
+                      "startTime": "2026-01-09T09:11:27.404Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -350,7 +350,7 @@
                       "workerIndex": 4,
                       "parallelIndex": 4,
                       "status": "failed",
-                      "duration": 5401,
+                      "duration": 6308,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\n    at /Users/krishsharma/Desktop/QA_Final/tests/frontend/authenticated.spec.js:41:29",
@@ -374,7 +374,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:30.318Z",
+                      "startTime": "2026-01-09T09:11:27.400Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -423,29 +423,32 @@
                     {
                       "workerIndex": 5,
                       "parallelIndex": 5,
-                      "status": "timedOut",
-                      "duration": 30605,
+                      "status": "failed",
+                      "duration": 7486,
                       "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\n    at /Users/krishsharma/Desktop/QA_Final/tests/frontend/authenticated.spec.js:55:30",
+                        "location": {
+                          "file": "/Users/krishsharma/Desktop/QA_Final/tests/frontend/authenticated.spec.js",
+                          "column": 30,
+                          "line": 55
+                        },
+                        "snippet": "  53 |     await page.waitForTimeout(1000);\n  54 |     const resultCard = page.locator('#cruisesBox').first();\n> 55 |     await expect(resultCard).toBeVisible();\n     |                              ^\n  56 |   });\n  57 | });\n  58 |"
                       },
                       "errors": [
                         {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
                           "location": {
                             "file": "/Users/krishsharma/Desktop/QA_Final/tests/frontend/authenticated.spec.js",
-                            "column": 16,
-                            "line": 53
+                            "column": 30,
+                            "line": 55
                           },
-                          "message": "Error: page.waitForTimeout: Target page, context or browser has been closed\n\n  51 |     const navireSelect = page.locator('select[name=\"Navire\"]').first();\n  52 |     await navireSelect.selectOption({ index: 1 }).catch(() => {});\n> 53 |     await page.waitForTimeout(1000);\n     |                ^\n  54 |     const resultCard = page.locator('#cruisesBox').first();\n  55 |     await expect(resultCard).toBeVisible();\n  56 |   });\n    at /Users/krishsharma/Desktop/QA_Final/tests/frontend/authenticated.spec.js:53:16"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\n\n  53 |     await page.waitForTimeout(1000);\n  54 |     const resultCard = page.locator('#cruisesBox').first();\n> 55 |     await expect(resultCard).toBeVisible();\n     |                              ^\n  56 |   });\n  57 | });\n  58 |\n    at /Users/krishsharma/Desktop/QA_Final/tests/frontend/authenticated.spec.js:55:30"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:30.322Z",
+                      "startTime": "2026-01-09T09:11:27.396Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -463,7 +466,12 @@
                           "contentType": "text/markdown",
                           "path": "/Users/krishsharma/Desktop/QA_Final/test-results/authenticated-Cruises-inte-63329-ire-triggers-results-update-frontend/error-context.md"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/krishsharma/Desktop/QA_Final/tests/frontend/authenticated.spec.js",
+                        "column": 30,
+                        "line": 55
+                      }
                     }
                   ],
                   "status": "unexpected"
@@ -507,12 +515,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 845,
+                      "duration": 1062,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:31.346Z",
+                      "startTime": "2026-01-09T09:11:29.369Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -541,12 +549,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 685,
+                      "duration": 1025,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:32.196Z",
+                      "startTime": "2026-01-09T09:11:30.444Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -575,12 +583,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1681,
+                      "duration": 2205,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:32.887Z",
+                      "startTime": "2026-01-09T09:11:31.485Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -609,7 +617,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 16130,
+                      "duration": 16526,
                       "error": {
                         "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"",
                         "stack": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n    at /Users/krishsharma/Desktop/QA_Final/tests/frontend/contact.spec.js:68:34",
@@ -633,7 +641,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:34.572Z",
+                      "startTime": "2026-01-09T09:11:33.699Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -683,7 +691,7 @@
                       "workerIndex": 6,
                       "parallelIndex": 4,
                       "status": "failed",
-                      "duration": 16041,
+                      "duration": 16131,
                       "error": {
                         "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"",
                         "stack": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n    at /Users/krishsharma/Desktop/QA_Final/tests/frontend/contact.spec.js:87:34",
@@ -707,7 +715,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:36.485Z",
+                      "startTime": "2026-01-09T09:11:34.560Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -772,14 +780,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 146,
+                      "duration": 1048,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:51.083Z",
+                      "startTime": "2026-01-09T09:11:35.763Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -806,14 +814,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 625,
+                      "duration": 1173,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:51.351Z",
+                      "startTime": "2026-01-09T09:11:36.972Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -840,14 +848,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 635,
+                      "duration": 1385,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:51.984Z",
+                      "startTime": "2026-01-09T09:11:38.155Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -874,14 +882,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 625,
+                      "duration": 1273,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:52.625Z",
+                      "startTime": "2026-01-09T09:11:39.549Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -907,15 +915,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 643,
+                      "duration": 1359,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:52.908Z",
+                      "startTime": "2026-01-09T09:11:40.831Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -947,7 +955,7 @@
           "specs": [
             {
               "title": "should load home page successfully",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -959,59 +967,19 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 1,
-                      "status": "failed",
-                      "duration": 5181,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/ShipCruiseTour|Home/i\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/ShipCruiseTour|Home/i\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"\"\u001b[22m\n\n    at /Users/krishsharma/Desktop/QA_Final/tests/frontend/home.spec.js:6:24",
-                        "location": {
-                          "file": "/Users/krishsharma/Desktop/QA_Final/tests/frontend/home.spec.js",
-                          "column": 24,
-                          "line": 6
-                        },
-                        "snippet": "  4 |   test('should load home page successfully', async ({ page }) => {\n  5 |     await page.goto('/');\n> 6 |     await expect(page).toHaveTitle(/ShipCruiseTour|Home/i);\n    |                        ^\n  7 |   });\n  8 |\n  9 |   test('should display navigation elements', async ({ page }) => {"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/krishsharma/Desktop/QA_Final/tests/frontend/home.spec.js",
-                            "column": 24,
-                            "line": 6
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/ShipCruiseTour|Home/i\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"\"\u001b[22m\n\n\n  4 |   test('should load home page successfully', async ({ page }) => {\n  5 |     await page.goto('/');\n> 6 |     await expect(page).toHaveTitle(/ShipCruiseTour|Home/i);\n    |                        ^\n  7 |   });\n  8 |\n  9 |   test('should display navigation elements', async ({ page }) => {\n    at /Users/krishsharma/Desktop/QA_Final/tests/frontend/home.spec.js:6:24"
-                        }
-                      ],
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 948,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:53.259Z",
+                      "startTime": "2026-01-09T09:11:42.205Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/home-Home-Page-Tests-should-load-home-page-successfully-frontend/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/home-Home-Page-Tests-should-load-home-page-successfully-frontend/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/home-Home-Page-Tests-should-load-home-page-successfully-frontend/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/krishsharma/Desktop/QA_Final/tests/frontend/home.spec.js",
-                        "column": 24,
-                        "line": 6
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "379953442ddfc3019abd-e78501274b5adb3d438b",
@@ -1032,15 +1000,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 96,
+                      "duration": 931,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:53.651Z",
+                      "startTime": "2026-01-09T09:11:43.160Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1066,15 +1034,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 624,
+                      "duration": 1414,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:53.751Z",
+                      "startTime": "2026-01-09T09:11:44.100Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1100,15 +1068,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 101,
+                      "duration": 1006,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:54.379Z",
+                      "startTime": "2026-01-09T09:11:45.525Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1134,15 +1102,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 97,
+                      "duration": 963,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:54.485Z",
+                      "startTime": "2026-01-09T09:11:46.541Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1185,15 +1153,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 271,
+                      "duration": 234,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:54.586Z",
+                      "startTime": "2026-01-09T09:11:47.517Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1219,15 +1187,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 244,
+                      "duration": 257,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:54.862Z",
+                      "startTime": "2026-01-09T09:11:47.762Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1253,15 +1221,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 2315,
+                      "duration": 2324,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:55.110Z",
+                      "startTime": "2026-01-09T09:11:48.028Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1288,14 +1256,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 323,
+                      "duration": 334,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:57.429Z",
+                      "startTime": "2026-01-09T09:11:50.578Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1338,15 +1306,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 273,
+                      "duration": 242,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:57.757Z",
+                      "startTime": "2026-01-09T09:11:50.360Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1372,15 +1340,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 284,
+                      "duration": 266,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:58.034Z",
+                      "startTime": "2026-01-09T09:11:50.609Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1406,15 +1374,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 8,
+                      "workerIndex": 9,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1280,
+                      "duration": 1319,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:58.322Z",
+                      "startTime": "2026-01-09T09:11:51.136Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1440,15 +1408,15 @@
                   "projectName": "frontend",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 350,
+                      "duration": 252,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:58.700Z",
+                      "startTime": "2026-01-09T09:11:50.879Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1494,31 +1462,31 @@
                       "workerIndex": 10,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 33,
+                      "duration": 41,
                       "error": {
-                        "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
-                        "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:15:22)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:31:21",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:17:26)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:31:21",
                         "location": {
                           "file": "/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js",
-                          "column": 22,
-                          "line": 15
+                          "column": 26,
+                          "line": 17
                         },
-                        "snippet": "  13 |   expect(response.ok()).toBeTruthy();\n  14 | const responseData = await response.text();\n> 15 | const cruises = JSON.parse(responseData);\n     |                      ^\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n  17 |   expect(cruises.length).toBeGreaterThan(0);\n  18 |   return cruises;"
+                        "snippet": "  15 | const cruises = JSON.parse(responseData);\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n> 17 |   expect(cruises.length).toBeGreaterThan(0);\n     |                          ^\n  18 |   return cruises;\n  19 | }\n  20 |"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js",
-                            "column": 22,
-                            "line": 15
+                            "column": 26,
+                            "line": 17
                           },
-                          "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n\n  13 |   expect(response.ok()).toBeTruthy();\n  14 | const responseData = await response.text();\n> 15 | const cruises = JSON.parse(responseData);\n     |                      ^\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n  17 |   expect(cruises.length).toBeGreaterThan(0);\n  18 |   return cruises;\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:15:22)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:31:21"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n  15 | const cruises = JSON.parse(responseData);\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n> 17 |   expect(cruises.length).toBeGreaterThan(0);\n     |                          ^\n  18 |   return cruises;\n  19 | }\n  20 |\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:17:26)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:31:21"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:59.395Z",
+                      "startTime": "2026-01-09T09:11:51.336Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1529,8 +1497,8 @@
                       ],
                       "errorLocation": {
                         "file": "/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js",
-                        "column": 22,
-                        "line": 15
+                        "column": 26,
+                        "line": 17
                       }
                     }
                   ],
@@ -1556,33 +1524,33 @@
                   "results": [
                     {
                       "workerIndex": 11,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "failed",
-                      "duration": 33,
+                      "duration": 39,
                       "error": {
-                        "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
-                        "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:15:22)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:36:21",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:17:26)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:36:21",
                         "location": {
                           "file": "/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js",
-                          "column": 22,
-                          "line": 15
+                          "column": 26,
+                          "line": 17
                         },
-                        "snippet": "  13 |   expect(response.ok()).toBeTruthy();\n  14 | const responseData = await response.text();\n> 15 | const cruises = JSON.parse(responseData);\n     |                      ^\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n  17 |   expect(cruises.length).toBeGreaterThan(0);\n  18 |   return cruises;"
+                        "snippet": "  15 | const cruises = JSON.parse(responseData);\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n> 17 |   expect(cruises.length).toBeGreaterThan(0);\n     |                          ^\n  18 |   return cruises;\n  19 | }\n  20 |"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js",
-                            "column": 22,
-                            "line": 15
+                            "column": 26,
+                            "line": 17
                           },
-                          "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n\n  13 |   expect(response.ok()).toBeTruthy();\n  14 | const responseData = await response.text();\n> 15 | const cruises = JSON.parse(responseData);\n     |                      ^\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n  17 |   expect(cruises.length).toBeGreaterThan(0);\n  18 |   return cruises;\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:15:22)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:36:21"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n  15 | const cruises = JSON.parse(responseData);\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n> 17 |   expect(cruises.length).toBeGreaterThan(0);\n     |                          ^\n  18 |   return cruises;\n  19 | }\n  20 |\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:17:26)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:36:21"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:59.681Z",
+                      "startTime": "2026-01-09T09:11:51.418Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1593,8 +1561,8 @@
                       ],
                       "errorLocation": {
                         "file": "/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js",
-                        "column": 22,
-                        "line": 15
+                        "column": 26,
+                        "line": 17
                       }
                     }
                   ],
@@ -1620,14 +1588,14 @@
                   "results": [
                     {
                       "workerIndex": 12,
-                      "parallelIndex": 4,
+                      "parallelIndex": 1,
                       "status": "passed",
                       "duration": 29,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:59.867Z",
+                      "startTime": "2026-01-09T09:11:51.650Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1654,33 +1622,33 @@
                   "results": [
                     {
                       "workerIndex": 13,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "failed",
-                      "duration": 33,
+                      "duration": 36,
                       "error": {
-                        "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON",
-                        "stack": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:15:22)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:57:21",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:17:26)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:57:21",
                         "location": {
                           "file": "/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js",
-                          "column": 22,
-                          "line": 15
+                          "column": 26,
+                          "line": 17
                         },
-                        "snippet": "  13 |   expect(response.ok()).toBeTruthy();\n  14 | const responseData = await response.text();\n> 15 | const cruises = JSON.parse(responseData);\n     |                      ^\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n  17 |   expect(cruises.length).toBeGreaterThan(0);\n  18 |   return cruises;"
+                        "snippet": "  15 | const cruises = JSON.parse(responseData);\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n> 17 |   expect(cruises.length).toBeGreaterThan(0);\n     |                          ^\n  18 |   return cruises;\n  19 | }\n  20 |"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js",
-                            "column": 22,
-                            "line": 15
+                            "column": 26,
+                            "line": 17
                           },
-                          "message": "SyntaxError: Unexpected token '<', \"<br />\n<b>\"... is not valid JSON\n\n  13 |   expect(response.ok()).toBeTruthy();\n  14 | const responseData = await response.text();\n> 15 | const cruises = JSON.parse(responseData);\n     |                      ^\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n  17 |   expect(cruises.length).toBeGreaterThan(0);\n  18 |   return cruises;\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:15:22)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:57:21"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n  15 | const cruises = JSON.parse(responseData);\n  16 |   expect(Array.isArray(cruises)).toBeTruthy();\n> 17 |   expect(cruises.length).toBeGreaterThan(0);\n     |                          ^\n  18 |   return cruises;\n  19 | }\n  20 |\n    at fetchCruises (/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:17:26)\n    at /Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js:57:21"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:59.972Z",
+                      "startTime": "2026-01-09T09:11:51.727Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1691,8 +1659,8 @@
                       ],
                       "errorLocation": {
                         "file": "/Users/krishsharma/Desktop/QA_Final/tests/backend/api.spec.js",
-                        "column": 22,
-                        "line": 15
+                        "column": 26,
+                        "line": 17
                       }
                     }
                   ],
@@ -1726,14 +1694,14 @@
                   "results": [
                     {
                       "workerIndex": 12,
-                      "parallelIndex": 4,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 7,
+                      "duration": 8,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:59.903Z",
+                      "startTime": "2026-01-09T09:11:51.688Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1760,14 +1728,14 @@
                   "results": [
                     {
                       "workerIndex": 12,
-                      "parallelIndex": 4,
+                      "parallelIndex": 1,
                       "status": "passed",
                       "duration": 5,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:59.915Z",
+                      "startTime": "2026-01-09T09:11:51.700Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1794,14 +1762,14 @@
                   "results": [
                     {
                       "workerIndex": 12,
-                      "parallelIndex": 4,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6,
+                      "duration": 5,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-09T08:59:59.924Z",
+                      "startTime": "2026-01-09T09:11:51.709Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1821,11 +1789,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-09T08:59:29.931Z",
-    "duration": 31584.089,
-    "expected": 25,
+    "startTime": "2026-01-09T09:11:27.025Z",
+    "duration": 31361.279,
+    "expected": 26,
     "skipped": 0,
-    "unexpected": 11,
+    "unexpected": 10,
     "flaky": 0
   }
 }

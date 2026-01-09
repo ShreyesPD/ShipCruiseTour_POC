@@ -1,5 +1,26 @@
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=e1]: "Fatal error: Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /Users/krishsharma/Desktop/QA_Final/website/app/Libs/DB/MysqliDb.php:541 Stack trace: #0 [internal function]: mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'shipcruisetour', NULL, NULL) #1 /Users/krishsharma/Desktop/QA_Final/website/app/Libs/DB/MysqliDb.php(541): ReflectionClass->newInstanceArgs(Array) #2 /Users/krishsharma/Desktop/QA_Final/website/app/Core/db.php(11): MysqliDb->connect() #3 /Users/krishsharma/Desktop/QA_Final/website/app/models/users.php(11): DB->connect() #4 /Users/krishsharma/Desktop/QA_Final/website/app/controllers/logincontroller.php(28): users->__construct() #5 /Users/krishsharma/Desktop/QA_Final/website/app/Core/app.php(43): LoginController->connect() #6 /Users/krishsharma/Desktop/QA_Final/website/app/Core/app.php(15): app->render() #7 /Users/krishsharma/Desktop/QA_Final/website/public/autoLoad.php(32): app->__construct() #8 /Users/krishsharma/Desktop/QA_Final/website/public/index.php(13): require_once('/Users/krishsha...') #9 {main} thrown in /Users/krishsharma/Desktop/QA_Final/website/app/Libs/DB/MysqliDb.php on line 541"
+- generic [ref=e4]:
+  - img "Phone image" [ref=e6]
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - paragraph [ref=e9]: Login
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - generic [ref=e12]: 
+          - text: "Username :"
+        - textbox " Username :" [ref=e13]:
+          - /placeholder: enter your e-mail
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: 
+          - text: "Password :"
+        - textbox " Password :" [ref=e17]:
+          - /placeholder: enter your password
+      - button "login" [ref=e19] [cursor=pointer]
+    - paragraph [ref=e20]:
+      - text: i don't have any account
+      - link "Register Here" [ref=e21] [cursor=pointer]:
+        - /url: http://localhost:8000/register
 ```
