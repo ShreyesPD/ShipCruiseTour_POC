@@ -188,8 +188,6 @@
                                                         type="button">
                                                     Résérver
                                                 </button>
-                                            </div>
-                                            <div class="d-flex flex-column mt-4">
                                                 <p class="m-2 text-center"
                                                    style="opacity: .7;color: color: rgb(14,86,110)">
                                                     *Taxes, fees and port expenses 99.85 DH*

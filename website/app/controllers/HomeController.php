@@ -18,7 +18,7 @@ class HomeController
         $data['TotalPort'] = $port->getTotal();
         $data['TotalClient'] = $user->getTotal();
         $data['TotalShip'] = $navire->getTotal();
-        $data['navire'] = []; // DELIBERATE_ERROR: should call $navire->getAllNavire()
+        $data['navire'] = $navire->getAllNavire();
         $data['TotalCruises'] = $croisiere->getTotal();
         $data['croisiere'] = $croisiere->getAllCroisiereHome();
 
