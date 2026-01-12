@@ -67,19 +67,6 @@
       "recommendedStatus": "In Progress"
     },
     {
-      "key": "MSCSHIP-21",
-      "summary": "Regression Test: Cruises Page - Has search/filter functionality",
-      "status": "In Progress",
-      "priority": "Medium",
-      "url": "https://shreyespd12.atlassian.net/browse/MSCSHIP-21",
-      "testsPassed": 5,
-      "testsFailed": 0,
-      "testsTotal": 5,
-      "passRate": 100,
-      "needsUpdate": true,
-      "recommendedStatus": "Done"
-    },
-    {
       "key": "MSCSHIP-22",
       "summary": "Regression Test: Cruises Page - Displays cruise cards with details",
       "status": "In Progress",
