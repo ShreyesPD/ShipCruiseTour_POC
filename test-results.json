@@ -10,7 +10,9 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 6
+    },
     "preserveOutput": "always",
     "reporter": [
       [
@@ -41,7 +43,9 @@
         "outputDir": "/Users/krishsharma/Desktop/QA_Final/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 6
+        },
         "id": "jira-generated",
         "name": "jira-generated",
         "testDir": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated",
@@ -60,25 +64,1670 @@
     "workers": 6,
     "webServer": null
   },
-  "suites": [],
-  "errors": [
+  "suites": [
     {
-      "message": "SyntaxError: /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_22.spec.js: Unexpected token, expected \",\" (20:65)\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then each cruise card should display cruise details'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then each cruise card should display cruise details\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m locator(\u001b[32m'text=cruise details'\u001b[39m)\u001b[33m.\u001b[39mor(locator(\u001b[32m'//*[contains(text(), '\u001b[39mcruise details\u001b[32m')]'\u001b[39m))\n \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the card should show cruise name'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m",
-      "stack": "SyntaxError: /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_22.spec.js: Unexpected token, expected \",\" (20:65)\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then each cruise card should display cruise details'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then each cruise card should display cruise details\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m locator(\u001b[32m'text=cruise details'\u001b[39m)\u001b[33m.\u001b[39mor(locator(\u001b[32m'//*[contains(text(), '\u001b[39mcruise details\u001b[32m')]'\u001b[39m))\n \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the card should show cruise name'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m",
-      "location": {
-        "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_22.spec.js",
-        "line": 20,
-        "column": 65
-      },
-      "snippet": "\u001b[90m   at \u001b[39mmscship_22.spec.js:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then each cruise card should display cruise details'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then each cruise card should display cruise details\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m locator(\u001b[32m'text=cruise details'\u001b[39m)\u001b[33m.\u001b[39mor(locator(\u001b[32m'//*[contains(text(), '\u001b[39mcruise details\u001b[32m')]'\u001b[39m))\n \u001b[90m    |\u001b[39m                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the card should show cruise name'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+      "title": "mscship_14.spec.js",
+      "file": "mscship_14.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "MSCSHIP-14: Contact Page - Loads successfully",
+          "file": "mscship_14.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Given user navigates to the contact page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 228,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:29.585Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "be24b312a14d3e87d5ab-3371ad180002ad3bd149",
+              "file": "mscship_14.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "When the page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 220,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:29.586Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "be24b312a14d3e87d5ab-29997b53aa6900010634",
+              "file": "mscship_14.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "Then the contact page should display successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 10470,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=successfully')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=successfully')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=successfully')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=successfully')\u001b[22m\n\n    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_14.spec.js:20:49",
+                        "location": {
+                          "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_14.spec.js",
+                          "column": 49,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the contact page should display successfully'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the contact page should display successfully\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=successfully'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the page should show the contact form'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_14.spec.js",
+                            "column": 49,
+                            "line": 20
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=successfully')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=successfully')\u001b[22m\n\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the contact page should display successfully'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the contact page should display successfully\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=successfully'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the page should show the contact form'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_14.spec.js:20:49\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:29.584Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_14.spec.js",
+                        "column": 49,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "be24b312a14d3e87d5ab-a42fb0702ab338eb6639",
+              "file": "mscship_14.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "And the page should show the contact form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 232,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:29.586Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "be24b312a14d3e87d5ab-9804ba68a1158e9f5bbb",
+              "file": "mscship_14.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "And the HTTP status code should be 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 225,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:29.583Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "be24b312a14d3e87d5ab-e2470b25949f785c744b",
+              "file": "mscship_14.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mscship_15.spec.js",
+      "file": "mscship_15.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "MSCSHIP-15: Regression Test: Contact Form - Displays all form elements",
+          "file": "mscship_15.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Given user is on the contact page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 224,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:29.587Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2e606a967d2abef879-882bab8503f3c8c9f308",
+              "file": "mscship_15.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "When the page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 115,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.044Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2e606a967d2abef879-079b27b26fefd08b063a",
+              "file": "mscship_15.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "Then the form should display all required elements",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 10349,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=All required elements')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=All required elements')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=All required elements')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=All required elements')\u001b[22m\n\n    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_15.spec.js:20:58",
+                        "location": {
+                          "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_15.spec.js",
+                          "column": 58,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the form should display all required elements'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the form should display all required elements\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=All required elements'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the form should have name input field'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_15.spec.js",
+                            "column": 58,
+                            "line": 20
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=All required elements')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=All required elements')\u001b[22m\n\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the form should display all required elements'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the form should display all required elements\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=All required elements'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the form should have name input field'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_15.spec.js:20:58\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.046Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_15-MSCSHIP-15-Regr-333bb-splay-all-required-elements-jira-generated/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_15-MSCSHIP-15-Regr-333bb-splay-all-required-elements-jira-generated/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_15.spec.js",
+                        "column": 58,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ff2e606a967d2abef879-e6a7b0a10e2da6d852e9",
+              "file": "mscship_15.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "And the form should have name input field",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 136,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.047Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2e606a967d2abef879-dc07d66478c2b5dfd8fe",
+              "file": "mscship_15.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "And the form should have email input field",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 129,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.050Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2e606a967d2abef879-59bd9689cfce980ffc8f",
+              "file": "mscship_15.spec.js",
+              "line": 31,
+              "column": 3
+            },
+            {
+              "title": "And the form should have message textarea",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 138,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.052Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2e606a967d2abef879-f118f5229fb3431cca63",
+              "file": "mscship_15.spec.js",
+              "line": 39,
+              "column": 3
+            },
+            {
+              "title": "And the form should have a submit button",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 98,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.165Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff2e606a967d2abef879-6b45fcc53998630f3add",
+              "file": "mscship_15.spec.js",
+              "line": 47,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mscship_16.spec.js",
+      "file": "mscship_16.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "MSCSHIP-16: Regression Test: Contact Form - Validates required fields",
+          "file": "mscship_16.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Given user is on the contact form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 90,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.188Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a7fd709112c078380159-01f2d558523cf0fcb000",
+              "file": "mscship_16.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "When user tries to submit the form without filling required fields",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 100,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.192Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a7fd709112c078380159-aaad51654e4594d1a830",
+              "file": "mscship_16.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "Then the form should display validation errors",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "failed",
+                      "duration": 10319,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=validation errors')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=validation errors')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=validation errors')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=validation errors')\u001b[22m\n\n    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_16.spec.js:20:54",
+                        "location": {
+                          "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_16.spec.js",
+                          "column": 54,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the form should display validation errors'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the form should display validation errors\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=validation errors'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the form should not submit'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_16.spec.js",
+                            "column": 54,
+                            "line": 20
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=validation errors')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=validation errors')\u001b[22m\n\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the form should display validation errors'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the form should display validation errors\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=validation errors'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the form should not submit'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_16.spec.js:20:54\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.202Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_16.spec.js",
+                        "column": 54,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a7fd709112c078380159-88530d611948644443b2",
+              "file": "mscship_16.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "And the form should not submit",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 92,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.271Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a7fd709112c078380159-085789943d8d227d5b5b",
+              "file": "mscship_16.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "And error messages should indicate which fields are required",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 87,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.284Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a7fd709112c078380159-ed21a742f29a7677de8e",
+              "file": "mscship_16.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mscship_19.spec.js",
+      "file": "mscship_19.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "MSCSHIP-19: Regression Test: Cruises Page - Loads successfully",
+          "file": "mscship_19.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Given user navigates to the cruises page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.299Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7df5ed1e7dd2e1cbbe21-25754cfcea014c301d30",
+              "file": "mscship_19.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "When the page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.370Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7df5ed1e7dd2e1cbbe21-027760ec2699f2d45ddd",
+              "file": "mscship_19.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "Then the cruises page should display successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 5229,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=Success')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Success')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=Success')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Success')\u001b[22m\n\n    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_19.spec.js:20:44",
+                        "location": {
+                          "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_19.spec.js",
+                          "column": 44,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the cruises page should display successfully'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the cruises page should display successfully\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=Success'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the HTTP status code should be 200'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_19.spec.js",
+                            "column": 44,
+                            "line": 20
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=Success')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Success')\u001b[22m\n\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the cruises page should display successfully'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the cruises page should display successfully\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=Success'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the HTTP status code should be 200'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_19.spec.js:20:44\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.379Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_19-MSCSHIP-19-Regr-1d704-should-display-successfully-jira-generated/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_19-MSCSHIP-19-Regr-1d704-should-display-successfully-jira-generated/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_19.spec.js",
+                        "column": 44,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7df5ed1e7dd2e1cbbe21-35e52acf3e0eaa32342e",
+              "file": "mscship_19.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "And the HTTP status code should be 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.394Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7df5ed1e7dd2e1cbbe21-390f0a17d7ad20f22168",
+              "file": "mscship_19.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "And the page should be ready for interaction",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.464Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7df5ed1e7dd2e1cbbe21-8959852c11758911251a",
+              "file": "mscship_19.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mscship_20.spec.js",
+      "file": "mscship_20.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "MSCSHIP-20: Regression Test: Cruises Page - Displays cruise listings",
+          "file": "mscship_20.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Given user is on the cruises page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 90,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.488Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7742e56e11992ed4f2-57e53a6f8d77d783c483",
+              "file": "mscship_20.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "When the page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 84,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.558Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7742e56e11992ed4f2-89cc1d9f7600719bcc02",
+              "file": "mscship_20.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "Then the page should display a list of available cruise listings",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10314,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=List of available cruise listings')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=List of available cruise listings')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=List of available cruise listings')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=List of available cruise listings')\u001b[22m\n\n    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_20.spec.js:20:70",
+                        "location": {
+                          "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_20.spec.js",
+                          "column": 70,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the page should display a list of available cruise listings'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the page should display a list of available cruise listings\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=List of available cruise listings'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And each listing should show cruise information'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_20.spec.js",
+                            "column": 70,
+                            "line": 20
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=List of available cruise listings')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=List of available cruise listings')\u001b[22m\n\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then the page should display a list of available cruise listings'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then the page should display a list of available cruise listings\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=List of available cruise listings'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And each listing should show cruise information'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_20.spec.js:20:70\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.583Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_20-MSCSHIP-20-Regr-64d79-f-available-cruise-listings-jira-generated/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_20-MSCSHIP-20-Regr-64d79-f-available-cruise-listings-jira-generated/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_20.spec.js",
+                        "column": 70,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "bf7742e56e11992ed4f2-a125e608a5fa83a63d9c",
+              "file": "mscship_20.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "And each listing should show cruise information",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.647Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7742e56e11992ed4f2-a830fa905a3a45108e7f",
+              "file": "mscship_20.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "And the listings should be visible to the user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 83,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.740Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bf7742e56e11992ed4f2-f2d32123466c5c78ca34",
+              "file": "mscship_20.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mscship_21.spec.js",
+      "file": "mscship_21.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "MSCSHIP-21: Regression Test: Cruises Page - Has search/filter functionality",
+          "file": "mscship_21.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Given user is on the cruises page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 81,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.829Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2dd5603bc199d5008967-10a0d1f02bbf5f924501",
+              "file": "mscship_21.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "When the page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 83,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:30.915Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2dd5603bc199d5008967-d6be7a543841e3866710",
+              "file": "mscship_21.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "Then the page should have search and filter functionality",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 87,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:31.003Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2dd5603bc199d5008967-d7564cdb2c1db7231ddd",
+              "file": "mscship_21.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "And user should see filter options for ports, dates, or ships",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 87,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:31.095Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2dd5603bc199d5008967-17b367b87453de792b68",
+              "file": "mscship_21.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "And the search/filter controls should be interactive",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 86,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:31.187Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2dd5603bc199d5008967-ca839014ca7ab18a584d",
+              "file": "mscship_21.spec.js",
+              "line": 31,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mscship_22.spec.js",
+      "file": "mscship_22.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "MSCSHIP-22: Regression Test: Cruises Page - Displays cruise cards with details",
+          "file": "mscship_22.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Given user is on the cruises page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 86,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:31.279Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2083dd874c229dc86a11-3c6c873d15c052576ebc",
+              "file": "mscship_22.spec.js",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "When the page displays cruise listings",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 82,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:31.370Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2083dd874c229dc86a11-6b04ac2f12356d02ce1c",
+              "file": "mscship_22.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "Then each cruise card should display cruise details",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 10333,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=cruise details')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=cruise details')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=cruise details')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=cruise details')\u001b[22m\n\n    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_22.spec.js:20:51",
+                        "location": {
+                          "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_22.spec.js",
+                          "column": 51,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then each cruise card should display cruise details'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then each cruise card should display cruise details\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=cruise details'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the card should show cruise name'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_22.spec.js",
+                            "column": 51,
+                            "line": 20
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=cruise details')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=cruise details')\u001b[22m\n\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Then each cruise card should display cruise details'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \u001b[90m// Acceptance Criteria: Then each cruise card should display cruise details\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=cruise details'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'And the card should show cruise name'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_22.spec.js:20:51\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:31.457Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_22-MSCSHIP-22-Regr-409de-ould-display-cruise-details-jira-generated/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/krishsharma/Desktop/QA_Final/test-results/mscship_22-MSCSHIP-22-Regr-409de-ould-display-cruise-details-jira-generated/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/krishsharma/Desktop/QA_Final/tests/jira-generated/mscship_22.spec.js",
+                        "column": 51,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2083dd874c229dc86a11-4af1fcd2d5c08cbd742f",
+              "file": "mscship_22.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "And the card should show cruise name",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 107,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:35.860Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2083dd874c229dc86a11-97131d1cd58bdeedd399",
+              "file": "mscship_22.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "And the card should show departure date",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 98,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:36.067Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2083dd874c229dc86a11-24926103a2ecedfc65c3",
+              "file": "mscship_22.spec.js",
+              "line": 31,
+              "column": 3
+            },
+            {
+              "title": "And the card should show destination ports",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 87,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:36.171Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2083dd874c229dc86a11-273ec68c0772648505d6",
+              "file": "mscship_22.spec.js",
+              "line": 39,
+              "column": 3
+            },
+            {
+              "title": "And the card should show pricing information",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "jira-generated",
+                  "projectName": "jira-generated",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T12:16:36.264Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2083dd874c229dc86a11-df39b7a81a14112dd875",
+              "file": "mscship_22.spec.js",
+              "line": 47,
+              "column": 3
+            }
+          ]
+        }
+      ]
     }
   ],
+  "errors": [],
   "stats": {
-    "startTime": "2026-01-12T12:15:01.916Z",
-    "duration": 50.57900000000001,
-    "expected": 0,
+    "startTime": "2026-01-12T12:16:29.232Z",
+    "duration": 12586.935,
+    "expected": 33,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 6,
     "flaky": 0
   }
 }
