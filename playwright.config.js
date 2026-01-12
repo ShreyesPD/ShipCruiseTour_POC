@@ -15,7 +15,7 @@ module.exports = defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 2, // Reduce parallel workers to prevent video encoding conflicts
   reporter: [
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
     ['json', { outputFile: 'test-results.json' }],
@@ -25,7 +25,28 @@ module.exports = defineConfig({
     baseURL: process.env.BASE_URL || 'http://localhost:8000',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    video: {
+      mode: 'retain-on-failure',
+      size: { width: 1280, height: 720 }
+    },
+    actionTimeout: 15000,
+    navigationTimeout: 30000,
+    // Fix blank video/screenshots in headless mode on macOS
+    headless: process.env.HEADED !== 'true',
+    launchOptions: {
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-sandbox',
+        '--disable-web-security',
+        '--disable-features=IsolateOrigins,site-per-process',
+        '--window-size=1280,720',
+        // Additional flags for better rendering on macOS
+        '--use-gl=swiftshader',
+        '--enable-features=NetworkService,NetworkServiceInProcess'
+      ]
+    }
   },
   projects: [
     {
