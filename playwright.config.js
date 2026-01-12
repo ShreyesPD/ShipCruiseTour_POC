@@ -31,6 +31,22 @@ module.exports = defineConfig({
     },
     actionTimeout: 15000,
     navigationTimeout: 30000,
+    // Fix blank video/screenshots in headless mode on macOS
+    headless: process.env.HEADED !== 'true',
+    launchOptions: {
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-sandbox',
+        '--disable-web-security',
+        '--disable-features=IsolateOrigins,site-per-process',
+        '--window-size=1280,720',
+        // Additional flags for better rendering on macOS
+        '--use-gl=swiftshader',
+        '--enable-features=NetworkService,NetworkServiceInProcess'
+      ]
+    }
   },
   projects: [
     {
