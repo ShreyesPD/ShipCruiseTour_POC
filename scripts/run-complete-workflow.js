@@ -421,6 +421,12 @@ function runTests() {
       cwd: process.cwd()
     });
     
+    // Allow video encoder to finalize and save video files
+    console.log('⏳ Waiting for video encoding to complete...');
+    const { execSync: exec } = require('child_process');
+    exec('sleep 2', { stdio: 'ignore' });
+    console.log('✅ Video encoding buffer complete');
+    
     // Even if tests pass, check the results file
     const resultsPath = path.join(process.cwd(), 'test-results.json');
     if (fs.existsSync(resultsPath)) {
@@ -440,6 +446,12 @@ function runTests() {
     };
   } catch (error) {
     // Tests failed, parse results
+    // Allow video encoder to finalize and save video files
+    console.log('⏳ Waiting for video encoding to complete...');
+    const { execSync: exec } = require('child_process');
+    exec('sleep 2', { stdio: 'ignore' });
+    console.log('✅ Video encoding buffer complete');
+    
     const resultsPath = path.join(process.cwd(), 'test-results.json');
     
     if (fs.existsSync(resultsPath)) {

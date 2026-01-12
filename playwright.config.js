@@ -15,7 +15,7 @@ module.exports = defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 2, // Reduce parallel workers to prevent video encoding conflicts
   reporter: [
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
     ['json', { outputFile: 'test-results.json' }],
@@ -25,7 +25,12 @@ module.exports = defineConfig({
     baseURL: process.env.BASE_URL || 'http://localhost:8000',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    video: {
+      mode: 'retain-on-failure',
+      size: { width: 1280, height: 720 }
+    },
+    actionTimeout: 15000,
+    navigationTimeout: 30000,
   },
   projects: [
     {
