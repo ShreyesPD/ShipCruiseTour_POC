@@ -1,40 +1,4 @@
 {
-  "mscship_14-MSCSHIP-14-Cont-37ddc-hould-show-the-contact-form-jira-generated": {
-    "screenshots": [],
-    "videos": [
-      {
-        "name": "video.webm",
-        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-37ddc-hould-show-the-contact-form-jira-generated/video.webm",
-        "contentType": "video/webm"
-      }
-    ],
-    "traces": [],
-    "other": [],
-    "folderName": "mscship_14-MSCSHIP-14-Cont-37ddc-hould-show-the-contact-form-jira-generated"
-  },
-  "tests/jira-generated/mscship_14.spec.js": {
-    "screenshots": [
-      {
-        "name": "test-failed-1.png",
-        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/test-failed-1.png",
-        "contentType": "image/png"
-      }
-    ],
-    "videos": [
-      {
-        "name": "video.webm",
-        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-37ddc-hould-show-the-contact-form-jira-generated/video.webm",
-        "contentType": "video/webm"
-      },
-      {
-        "name": "video.webm",
-        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/video.webm",
-        "contentType": "video/webm"
-      }
-    ],
-    "traces": [],
-    "other": []
-  },
   "mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated": {
     "screenshots": [
       {
@@ -53,6 +17,24 @@
     "traces": [],
     "other": [],
     "folderName": "mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated"
+  },
+  "tests/jira-generated/mscship_14.spec.js": {
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": []
   },
   "mscship_15-MSCSHIP-15-Regr-333bb-splay-all-required-elements-jira-generated": {
     "screenshots": [
@@ -85,6 +67,31 @@
       {
         "name": "video.webm",
         "path": "../test-results/mscship_15-MSCSHIP-15-Regr-333bb-splay-all-required-elements-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": []
+  },
+  "mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated": {
+    "screenshots": [],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": [],
+    "folderName": "mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated"
+  },
+  "tests/jira-generated/mscship_16.spec.js": {
+    "screenshots": [],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated/video.webm",
         "contentType": "video/webm"
       }
     ],
@@ -159,6 +166,80 @@
       {
         "name": "video.webm",
         "path": "../test-results/mscship_20-MSCSHIP-20-Regr-64d79-f-available-cruise-listings-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": []
+  },
+  "mscship_21-MSCSHIP-21-Regr-4592b-ch-and-filter-functionality-jira-generated": {
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_21-MSCSHIP-21-Regr-4592b-ch-and-filter-functionality-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_21-MSCSHIP-21-Regr-4592b-ch-and-filter-functionality-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": [],
+    "folderName": "mscship_21-MSCSHIP-21-Regr-4592b-ch-and-filter-functionality-jira-generated"
+  },
+  "tests/jira-generated/mscship_21.spec.js": {
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_21-MSCSHIP-21-Regr-4592b-ch-and-filter-functionality-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_21-MSCSHIP-21-Regr-4592b-ch-and-filter-functionality-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": []
+  },
+  "mscship_22-MSCSHIP-22-Regr-409de-ould-display-cruise-details-jira-generated": {
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_22-MSCSHIP-22-Regr-409de-ould-display-cruise-details-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_22-MSCSHIP-22-Regr-409de-ould-display-cruise-details-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": [],
+    "folderName": "mscship_22-MSCSHIP-22-Regr-409de-ould-display-cruise-details-jira-generated"
+  },
+  "tests/jira-generated/mscship_22.spec.js": {
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_22-MSCSHIP-22-Regr-409de-ould-display-cruise-details-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_22-MSCSHIP-22-Regr-409de-ould-display-cruise-details-jira-generated/video.webm",
         "contentType": "video/webm"
       }
     ],
