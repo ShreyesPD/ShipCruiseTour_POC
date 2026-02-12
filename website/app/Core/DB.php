@@ -7,7 +7,7 @@ class DB
 
     public function connect(): false|MysqliDb
     {
-        $database = new MysqliDb (HOST, USER, PASS, DBNAME);
+        $database = new MysqliDb(HOST, USER, PASS, DBNAME, defined('PORT') ? PORT : 3306);
         if (!$database->connect()) {
             $this->db = $database;
             return $this->db;

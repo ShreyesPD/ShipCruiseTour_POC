@@ -2,6 +2,52 @@
 DEVELOPMENT DOCUMENTATION
 ================================================================================
 
+Date: Thursday, February 12, 2026 (local)
+
+================================================================================
+ENV CONFIGURATION AND PROJECT START
+================================================================================
+
+TASK: Place .env with AI provider, GitHub, and Jira configuration; run the project.
+
+CHANGES MADE:
+-------------
+1. Created .env at project root with:
+   - AI_PROVIDER=sarvam, SARVAM_API_KEY, AI_MODEL=sarvam-m
+   - GITHUB_TOKEN
+   - JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN, JIRA_PROJECT_KEY
+   - BASE_URL=http://localhost:8000
+2. Verified .env is listed in .gitignore (not committed).
+3. Installed npm dependencies (npm install).
+4. Started PHP development server in background:
+   - Document root: website/public
+   - URL: http://localhost:8000
+   - Server responds with HTTP 200.
+
+VERIFICATION:
+------------
+- curl http://localhost:8000/ returns 200.
+- .env is in the correct location (project root) for ai-agent, run-complete-workflow.js, and Playwright config.
+
+================================================================================
+FIX: PHP MYSQLI "NO SUCH FILE OR DIRECTORY" DATABASE CONNECTION ERROR
+================================================================================
+Date: Thursday, February 12, 2026 (local)
+
+TASK: Fix Fatal error mysqli_sql_exception "No such file or directory" when connecting to MySQL.
+
+ROOT CAUSE: On macOS, using HOST="localhost" makes PHP use a Unix socket. If MySQL
+is not running or the socket path differs, mysqli throws "No such file or directory".
+
+CHANGES MADE:
+-------------
+1. website/app/Config/config.php: HOST changed to "127.0.0.1", added PORT = 3306.
+2. website/app/Core/db.php: MysqliDb now called with port (5th argument).
+3. scripts/setup-db.sh: Creates DB and imports Conception & DB/DB -shipcruisetour.sql.
+
+VERIFICATION: Start MySQL (brew services start mysql), set USER/PASS in config.php to match local MySQL, run bash scripts/setup-db.sh, then reload http://localhost:8000.
+
+================================================================================
 Date: Tuesday, January 6, 2026, 13:06:17 IST
 
 ================================================================================
