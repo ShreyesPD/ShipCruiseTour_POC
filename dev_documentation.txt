@@ -48,6 +48,27 @@ CHANGES MADE:
 VERIFICATION: Start MySQL (brew services start mysql), set USER/PASS in config.php to match local MySQL, run bash scripts/setup-db.sh, then reload http://localhost:8000.
 
 ================================================================================
+JIRA BOARD INTEGRATION (npm start)
+================================================================================
+Date: Thursday, February 12, 2026 (local)
+
+TASK: Update Jira board when tests run via npm start; create Jira tickets for test failures via API.
+
+CHANGES MADE:
+-------------
+1. scripts/jira-issue-creator.js (new):
+   - Reads test-results.json, extracts failed tests (suite, spec, error message).
+   - Calls Jira REST API v3 (POST /rest/api/3/issue) with Basic auth (JIRA_EMAIL + JIRA_API_TOKEN).
+   - Creates one Bug (or JIRA_ISSUE_TYPE) per failure; board is updated automatically.
+2. scripts/run-complete-workflow.js:
+   - Step 2.5 "Updating Jira board" after Run tests: calls syncJiraBoard().
+   - When all tests pass: sync still runs (0 issues created).
+   - When tests fail: creates Jira issues for each failed test, logs ticket URLs and summary.
+3. .env.example: JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN, JIRA_PROJECT_KEY, optional JIRA_ISSUE_TYPE.
+
+VERIFICATION: Set JIRA_* in .env, run npm start; after tests, check Jira project for new issues and board update.
+
+================================================================================
 Date: Tuesday, January 6, 2026, 13:06:17 IST
 
 ================================================================================

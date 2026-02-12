@@ -13,6 +13,7 @@ console.log('═'.repeat(80));
 const steps = {
   startProject: false,
   runTests: false,
+  syncJira: false,
   generateDashboard: false,
   analyzeErrors: false,
   applyFixes: false,
@@ -47,11 +48,31 @@ async function runWorkflow() {
     
     if (testResults.allPassed) {
       console.log('✅ All tests passed! No fixes needed.');
+      // Still sync Jira (0 failures = no new tickets, board unchanged)
+      const jiraResults = await syncJiraBoard();
+      steps.syncJira = true;
+      if (jiraResults.skipped) {
+        console.log('⚠️  Jira not configured. Set JIRA_* in .env to update board on failures.');
+      }
       serverProcess.kill();
       return { success: true, message: 'All tests passed' };
     }
     
     console.log(`⚠️  Found ${testResults.failureCount} test failure(s)`);
+    
+    // Step 2.5: Update Jira board with test results (creates issues for failures via API)
+    console.log('\n📋 Step 2.5: Updating Jira board...');
+    console.log('─'.repeat(80));
+    const jiraResults = await syncJiraBoard();
+    steps.syncJira = true;
+    if (jiraResults.created > 0) {
+      console.log(`✅ Created ${jiraResults.created} Jira ticket(s). Board updated.`);
+      (jiraResults.urls || []).forEach(url => console.log(`   ${url}`));
+    } else if (jiraResults.skipped) {
+      console.log('⚠️  Jira skipped (missing .env: JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN, JIRA_PROJECT_KEY)');
+    } else {
+      console.log('✅ No failed tests to report; Jira board unchanged.');
+    }
     
     // Step 3: Generate dashboard
     console.log('\n📋 Step 3: Generating test dashboard...');
@@ -128,6 +149,7 @@ async function runWorkflow() {
     console.log('\nSummary:');
     console.log(`  Tests Run: ${testResults.totalTests}`);
     console.log(`  Initial Failures: ${testResults.failureCount}`);
+    console.log(`  Jira Tickets Created: ${jiraResults.created || 0}`);
     console.log(`  Fixes Applied: ${fixResults.successfulFixes}`);
     console.log(`  Final Status: ${verifyResults.allPassed ? '✅ All Passing' : `⚠️  ${verifyResults.failureCount} Still Failing`}`);
     if (prResults.success) {
@@ -352,6 +374,37 @@ function countTestResults(results) {
   }
   
   return { totalTests, failureCount };
+}
+
+async function syncJiraBoard() {
+  const { createJiraTicketsFromTestResults } = require('./jira-issue-creator');
+  const baseUrl = process.env.JIRA_BASE_URL;
+  const email = process.env.JIRA_EMAIL;
+  const token = process.env.JIRA_API_TOKEN;
+  const projectKey = process.env.JIRA_PROJECT_KEY;
+  if (!baseUrl || !email || !token || !projectKey) {
+    return { created: 0, keys: [], urls: [], skipped: true };
+  }
+  const resultsPath = path.join(process.cwd(), 'test-results.json');
+  const config = {
+    jiraBaseUrl: baseUrl,
+    jiraEmail: email,
+    jiraApiToken: token,
+    jiraProjectKey: projectKey,
+    jiraIssueType: process.env.JIRA_ISSUE_TYPE || 'Bug'
+  };
+  try {
+    const result = await createJiraTicketsFromTestResults(config, resultsPath);
+    return {
+      created: result.created,
+      keys: result.keys || [],
+      urls: result.urls || [],
+      skipped: false
+    };
+  } catch (err) {
+    console.error('Jira sync failed:', err.message);
+    return { created: 0, keys: [], urls: [], skipped: false, error: err.message };
+  }
 }
 
 function generateDashboard() {

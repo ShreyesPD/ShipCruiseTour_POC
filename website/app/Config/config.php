@@ -38,11 +38,11 @@ if (!defined('BURL')) {
 // Use 127.0.0.1 + port to force TCP (avoids "No such file or directory" on macOS when MySQL socket path differs)
 // Values from .env (DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME) override these defaults.
 if (!defined('HOST')) {
-    define('HOST', getenv('DB_HOST') ?: "127.0.0.1");
-    define('PORT', (int)(getenv('DB_PORT') ?: 3306));
-    define('USER', getenv('DB_USER') ?: "root");
-    define('PASS', getenv('DB_PASSWORD') ?: "Spd7890&*()");
-    define('DBNAME', getenv('DB_NAME') ?: "shipcruisetour");
+    define('HOST', getenv('DB_HOST') !== false ? getenv('DB_HOST') : "127.0.0.1");
+    define('PORT', (int)(getenv('DB_PORT') !== false ? getenv('DB_PORT') : 3306));
+    define('USER', getenv('DB_USER') !== false ? getenv('DB_USER') : "root");
+    define('PASS', getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : "Spd7890&*()");
+    define('DBNAME', getenv('DB_NAME') !== false ? getenv('DB_NAME') : "shipcruisetour");
 }
 
 
