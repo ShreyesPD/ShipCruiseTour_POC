@@ -1,0 +1,992 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-12T10:00:41.199Z",
+    "projectName": "qa_testing_poc",
+    "projectPath": "/Users/krishsharma/Desktop/untitled folder",
+    "version": "1.0.0",
+    "generator": "testbot-mcp"
+  },
+  "stats": {
+    "total": 36,
+    "passed": 26,
+    "failed": 10,
+    "skipped": 0,
+    "duration": 162091,
+    "passRate": 72
+  },
+  "tests": [
+    {
+      "id": "frontend/authenticated.spec.js->-Authenticated-user-flows-user-can-login-and-see-dropdown-with-name",
+      "title": "user can login and see dropdown with name",
+      "suite": "frontend/authenticated.spec.js > Authenticated user flows",
+      "file": "frontend/authenticated.spec.js",
+      "status": "timedout",
+      "duration": 30520,
+      "error": {
+        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test timed out because the user login process is taking longer than the specified 30000ms. This could be due to slow API response, rendering delays, or insufficient waiting for elements to load before interacting with them.",
+        "rootCause": "The test does not wait long enough for the dropdown to appear after login, or there is a delay in the API response or UI rendering.",
+        "suggestedFix": {
+          "description": "Increase the timeout for the test and add explicit waits for the dropdown to be present and visible.",
+          "changes": [
+            {
+              "file": "frontend/authenticated.spec.js",
+              "action": "replace",
+              "lineStart": 10,
+              "lineEnd": 15,
+              "oldCode": "it('user can login and see dropdown with name', () => {",
+              "newCode": "it('user can login and see dropdown with name', async () => {"
+            },
+            {
+              "file": "frontend/authenticated.spec.js",
+              "action": "add",
+              "lineStart": 16,
+              "lineEnd": 16,
+              "oldCode": "",
+              "newCode": "  await page.waitForSelector('.dropdown', { timeout: 40000 });"
+            },
+            {
+              "file": "frontend/authenticated.spec.js",
+              "action": "replace",
+              "lineStart": 20,
+              "lineEnd": 20,
+              "oldCode": "expect(dropdown).toBeVisible();",
+              "newCode": "expect(await dropdown).toBeVisible();"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "frontend/authenticated.spec.js"
+        ],
+        "testingRecommendations": "Run the test with the increased timeout and explicit waits. Verify that the dropdown appears within the new timeout period and that the test passes consistently. Monitor the API response times and UI rendering performance to ensure there are no underlying issues.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "frontend/authenticated.spec.js->-Authenticated-user-flows-reservation-page-requires-authentication",
+      "title": "reservation page requires authentication",
+      "suite": "frontend/authenticated.spec.js > Authenticated user flows",
+      "file": "frontend/authenticated.spec.js",
+      "status": "passed",
+      "duration": 1688,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/authenticated.spec.js->-Authenticated-user-flows-logged-in-user-can-access-reservation-page",
+      "title": "logged-in user can access reservation page",
+      "suite": "frontend/authenticated.spec.js > Authenticated user flows",
+      "file": "frontend/authenticated.spec.js",
+      "status": "timedout",
+      "duration": 30539,
+      "error": {
+        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test 'logged-in user can access reservation page' timed out because the user authentication process or page loading took longer than the 30,000ms timeout threshold. This could be due to slow API responses, inefficient code, or excessive waiting time for elements to load.",
+        "rootCause": "The test timeout is set too low for the actual time required to complete the authentication and page loading process.",
+        "suggestedFix": {
+          "description": "Increase the test timeout to accommodate the actual time required for the user to log in and the reservation page to load.",
+          "changes": [
+            {
+              "file": "frontend/authenticated.spec.js",
+              "action": "replace",
+              "lineStart": 10,
+              "lineEnd": 15,
+              "oldCode": "it('logged-in user can access reservation page', async () => {",
+              "newCode": "it('logged-in user can access reservation page', async () => {\n    jest.setTimeout(40000);"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "frontend/authenticated.spec.js"
+        ],
+        "testingRecommendations": "Rerun the test with the increased timeout to ensure it passes. Monitor the console for any errors or warnings that might indicate further issues with the authentication or page loading process.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "frontend/authenticated.spec.js->-Authenticated-user-flows-user-can-logout-from-navbar-dropdown",
+      "title": "user can logout from navbar dropdown",
+      "suite": "frontend/authenticated.spec.js > Authenticated user flows",
+      "file": "frontend/authenticated.spec.js",
+      "status": "timedout",
+      "duration": 30537,
+      "error": {
+        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test timed out because the logout process is taking longer than the specified 30000ms. This could be due to a delay in the UI rendering after clicking the logout button or an issue with the test's waiting mechanism.",
+        "rootCause": "The test does not wait for the UI to fully update after clicking the logout button, leading to a timeout.",
+        "suggestedFix": {
+          "description": "Increase the wait time for the logout button click and ensure the UI has fully updated before proceeding.",
+          "changes": [
+            {
+              "file": "frontend/authenticated.spec.js",
+              "action": "replace",
+              "lineStart": 10,
+              "lineEnd": 15,
+              "oldCode": "await page.click('#logoutButton');",
+              "newCode": "await page.click('#logoutButton');\nawait page.waitForNavigation({ waitUntil: 'networkidle0' });"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "frontend/authenticated.spec.js"
+        ],
+        "testingRecommendations": "Run the test again with the increased wait time and verify that the logout process completes within the new timeout limit. Check the UI to ensure all elements are properly updated after logout.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "frontend/authenticated.spec.js->-Cruises-interactions-opening-cruise-detail-renders-modal-with-reservation-form",
+      "title": "opening cruise detail renders modal with reservation form",
+      "suite": "frontend/authenticated.spec.js > Cruises interactions",
+      "file": "frontend/authenticated.spec.js",
+      "status": "failed",
+      "duration": 6540,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\n    at /Users/krishsharma/Desktop/untitled folder/tests/frontend/authenticated.spec.js:41:29",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/untitled folder/tests/frontend/authenticated.spec.js",
+          "column": 29,
+          "line": 41
+        },
+        "snippet": "\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/Cuirses'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m     \u001b[36mconst\u001b[39m firstCard \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesBox'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(firstCard)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m firstCard\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mconst\u001b[39m detailContainer \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesDetailContainer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test is failing because the element with the locator '#cruisesBox' is not visible within the specified timeout of 5000ms. This could be due to the element not being rendered correctly, a timing issue where the element takes longer to load, or the element not being present in the DOM at all.",
+        "rootCause": "The element '#cruisesBox' is not visible within the timeout period, possibly due to a rendering issue or a timing problem in the test.",
+        "suggestedFix": {
+          "description": "Increase the timeout for the element to be visible and ensure the element is correctly rendered before the test checks for its visibility.",
+          "changes": [
+            {
+              "file": "frontend/authenticated.spec.js",
+              "action": "replace",
+              "lineStart": 41,
+              "lineEnd": 41,
+              "oldCode": "toBeVisible",
+              "newCode": "toBeVisible({ timeout: 10000 })"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "frontend/authenticated.spec.js"
+        ],
+        "testingRecommendations": "Run the test again with the increased timeout. If the test passes, monitor the application to ensure the element is rendering correctly. If the test fails again, check the element's presence and visibility in the DOM during the test execution.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "frontend/authenticated.spec.js->-Cruises-interactions-searching-cruises-by-navire-triggers-results-update",
+      "title": "searching cruises by navire triggers results update",
+      "suite": "frontend/authenticated.spec.js > Cruises interactions",
+      "file": "frontend/authenticated.spec.js",
+      "status": "failed",
+      "duration": 7772,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#cruisesBox').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#cruisesBox').first()\u001b[22m\n\n    at /Users/krishsharma/Desktop/untitled folder/tests/frontend/authenticated.spec.js:55:30",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/untitled folder/tests/frontend/authenticated.spec.js",
+          "column": 30,
+          "line": 55
+        },
+        "snippet": "\u001b[0m \u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mconst\u001b[39m resultCard \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cruisesBox'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(resultCard)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m\u001b[0m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test is failing because the element with the locator '#cruisesBox' is not visible within the specified timeout of 5000ms. This could be due to the element not being rendered properly, a timing issue where the element takes longer to load, or the element not being present in the DOM at all.",
+        "rootCause": "The element '#cruisesBox' is not visible within the expected time frame, possibly due to a delay in rendering or incorrect element selector.",
+        "suggestedFix": {
+          "description": "Increase the timeout for the `toBeVisible` assertion to allow more time for the element to load, and verify the correct selector is being used.",
+          "changes": [
+            {
+              "file": "frontend/authenticated.spec.js",
+              "action": "replace",
+              "lineStart": 55,
+              "lineEnd": 55,
+              "oldCode": "toBeVisible( { timeout: 5000 } )",
+              "newCode": "toBeVisible( { timeout: 10000 } )"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "frontend/authenticated.spec.js"
+        ],
+        "testingRecommendations": "Run the test again with the increased timeout. If the test passes, monitor the application to ensure the element is rendering correctly. If the test fails again, verify the selector '#cruisesBox' is correct and the element is present in the DOM.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "frontend/contact.spec.js->-Contact-Page-Tests-should-load-contact-page-successfully",
+      "title": "should load contact page successfully",
+      "suite": "frontend/contact.spec.js > Contact Page Tests",
+      "file": "frontend/contact.spec.js",
+      "status": "passed",
+      "duration": 1123,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/contact.spec.js->-Contact-Page-Tests-should-display-contact-form-elements",
+      "title": "should display contact form elements",
+      "suite": "frontend/contact.spec.js > Contact Page Tests",
+      "file": "frontend/contact.spec.js",
+      "status": "passed",
+      "duration": 1254,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/contact.spec.js->-Contact-Page-Tests-should-validate-contact-form-fields",
+      "title": "should validate contact form fields",
+      "suite": "frontend/contact.spec.js > Contact Page Tests",
+      "file": "frontend/contact.spec.js",
+      "status": "passed",
+      "duration": 2201,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/contact.spec.js->-Contact-Page-Tests-should-submit-contact-form-via-mock-handler",
+      "title": "should submit contact form via mock handler",
+      "suite": "frontend/contact.spec.js > Contact Page Tests",
+      "file": "frontend/contact.spec.js",
+      "status": "failed",
+      "duration": 16647,
+      "error": {
+        "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"",
+        "stack": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n    at /Users/krishsharma/Desktop/untitled folder/tests/frontend/contact.spec.js:68:34",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/untitled folder/tests/frontend/contact.spec.js",
+          "column": 34,
+          "line": 68
+        },
+        "snippet": "\u001b[0m \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'textarea[name=\"message\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Mock submission for testing.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m     \u001b[36mconst\u001b[39m responsePromise \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForResponse(\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m       (resp) \u001b[33m=>\u001b[39m resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'send-email-mock.php'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 70 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 71 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test is timing out while waiting for a response event after submitting the contact form. This suggests that the mock handler is not properly intercepting or responding to the form submission request within the expected time frame.",
+        "rootCause": "The mock handler for the contact form submission is either not set up correctly or is not responding quickly enough, causing the test to wait longer than the 15-second timeout.",
+        "suggestedFix": {
+          "description": "Increase the timeout for waiting on the response event to give the mock handler more time to process the request.",
+          "changes": [
+            {
+              "file": "frontend/contact.spec.js",
+              "action": "replace",
+              "lineStart": 68,
+              "lineEnd": 68,
+              "oldCode": "page.waitForResponse",
+              "newCode": "page.waitForResponse({ timeout: 30000 })"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "frontend/contact.spec.js"
+        ],
+        "testingRecommendations": "Rerun the test after increasing the timeout. If the test still fails, verify the mock handler setup and ensure it is correctly intercepting and responding to the form submission request. Additionally, check the network requests in the browser to confirm the mock response is being sent.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "frontend/contact.spec.js->-Contact-Page-Tests-should-submit-contact-form-via-real-handler-and-log-entry",
+      "title": "should submit contact form via real handler and log entry",
+      "suite": "frontend/contact.spec.js > Contact Page Tests",
+      "file": "frontend/contact.spec.js",
+      "status": "failed",
+      "duration": 16192,
+      "error": {
+        "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"",
+        "stack": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n    at /Users/krishsharma/Desktop/untitled folder/tests/frontend/contact.spec.js:87:34",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/untitled folder/tests/frontend/contact.spec.js",
+          "column": 34,
+          "line": 87
+        },
+        "snippet": "\u001b[0m \u001b[90m 85 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'textarea[name=\"message\"]'\u001b[39m\u001b[33m,\u001b[39m uniqueMessage)\u001b[33m;\u001b[39m\n \u001b[90m 86 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     \u001b[36mconst\u001b[39m responsePromise \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForResponse(\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m       (resp) \u001b[33m=>\u001b[39m resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'send-email.php'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 89 |\u001b[39m       { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 90 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[0m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test is timing out while waiting for a response event after submitting the contact form. This suggests that the server is taking longer than the specified timeout (15000ms) to respond, or the response event is not being triggered as expected.",
+        "rootCause": "The server is slow to respond to the contact form submission, or there is an issue with the test setup that prevents the response event from being captured correctly.",
+        "suggestedFix": {
+          "description": "Increase the timeout for waiting on the response event to give the server more time to process the request and return a response.",
+          "changes": [
+            {
+              "file": "frontend/contact.spec.js",
+              "action": "replace",
+              "lineStart": 87,
+              "lineEnd": 87,
+              "oldCode": "15000",
+              "newCode": "30000"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "frontend/contact.spec.js"
+        ],
+        "testingRecommendations": "Rerun the test after increasing the timeout to see if it resolves the issue. If the test still fails, investigate the server logs for any errors or performance issues during the contact form submission.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "frontend/cruises.spec.js->-Cruises-Page-Tests-should-load-cruises-page-successfully",
+      "title": "should load cruises page successfully",
+      "suite": "frontend/cruises.spec.js > Cruises Page Tests",
+      "file": "frontend/cruises.spec.js",
+      "status": "passed",
+      "duration": 939,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/cruises.spec.js->-Cruises-Page-Tests-should-display-cruise-listings",
+      "title": "should display cruise listings",
+      "suite": "frontend/cruises.spec.js > Cruises Page Tests",
+      "file": "frontend/cruises.spec.js",
+      "status": "passed",
+      "duration": 1179,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/cruises.spec.js->-Cruises-Page-Tests-should-have-search/filter-functionality",
+      "title": "should have search/filter functionality",
+      "suite": "frontend/cruises.spec.js > Cruises Page Tests",
+      "file": "frontend/cruises.spec.js",
+      "status": "passed",
+      "duration": 1405,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/cruises.spec.js->-Cruises-Page-Tests-should-display-cruise-cards-with-details",
+      "title": "should display cruise cards with details",
+      "suite": "frontend/cruises.spec.js > Cruises Page Tests",
+      "file": "frontend/cruises.spec.js",
+      "status": "passed",
+      "duration": 1244,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/cruises.spec.js->-Cruises-Page-Tests-should-allow-viewing-cruise-details",
+      "title": "should allow viewing cruise details",
+      "suite": "frontend/cruises.spec.js > Cruises Page Tests",
+      "file": "frontend/cruises.spec.js",
+      "status": "passed",
+      "duration": 1212,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/home.spec.js->-Home-Page-Tests-should-load-home-page-successfully",
+      "title": "should load home page successfully",
+      "suite": "frontend/home.spec.js > Home Page Tests",
+      "file": "frontend/home.spec.js",
+      "status": "passed",
+      "duration": 909,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/home.spec.js->-Home-Page-Tests-should-display-navigation-elements",
+      "title": "should display navigation elements",
+      "suite": "frontend/home.spec.js > Home Page Tests",
+      "file": "frontend/home.spec.js",
+      "status": "passed",
+      "duration": 907,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/home.spec.js->-Home-Page-Tests-should-display-cruise-listings",
+      "title": "should display cruise listings",
+      "suite": "frontend/home.spec.js > Home Page Tests",
+      "file": "frontend/home.spec.js",
+      "status": "passed",
+      "duration": 1408,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/home.spec.js->-Home-Page-Tests-should-have-login-link",
+      "title": "should have login link",
+      "suite": "frontend/home.spec.js > Home Page Tests",
+      "file": "frontend/home.spec.js",
+      "status": "passed",
+      "duration": 1013,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/home.spec.js->-Home-Page-Tests-should-have-register-link",
+      "title": "should have register link",
+      "suite": "frontend/home.spec.js > Home Page Tests",
+      "file": "frontend/home.spec.js",
+      "status": "passed",
+      "duration": 996,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/login.spec.js->-Login-Page-Tests-should-load-login-page-successfully",
+      "title": "should load login page successfully",
+      "suite": "frontend/login.spec.js > Login Page Tests",
+      "file": "frontend/login.spec.js",
+      "status": "passed",
+      "duration": 312,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/login.spec.js->-Login-Page-Tests-should-display-login-form-elements",
+      "title": "should display login form elements",
+      "suite": "frontend/login.spec.js > Login Page Tests",
+      "file": "frontend/login.spec.js",
+      "status": "passed",
+      "duration": 315,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/login.spec.js->-Login-Page-Tests-should-show-error-message-for-invalid-credentials",
+      "title": "should show error message for invalid credentials",
+      "suite": "frontend/login.spec.js > Login Page Tests",
+      "file": "frontend/login.spec.js",
+      "status": "passed",
+      "duration": 2445,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/login.spec.js->-Login-Page-Tests-should-navigate-to-register-page",
+      "title": "should navigate to register page",
+      "suite": "frontend/login.spec.js > Login Page Tests",
+      "file": "frontend/login.spec.js",
+      "status": "passed",
+      "duration": 390,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/register.spec.js->-Register-Page-Tests-should-load-register-page-successfully",
+      "title": "should load register page successfully",
+      "suite": "frontend/register.spec.js > Register Page Tests",
+      "file": "frontend/register.spec.js",
+      "status": "passed",
+      "duration": 286,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/register.spec.js->-Register-Page-Tests-should-display-registration-form-elements",
+      "title": "should display registration form elements",
+      "suite": "frontend/register.spec.js > Register Page Tests",
+      "file": "frontend/register.spec.js",
+      "status": "passed",
+      "duration": 284,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/register.spec.js->-Register-Page-Tests-should-validate-required-fields",
+      "title": "should validate required fields",
+      "suite": "frontend/register.spec.js > Register Page Tests",
+      "file": "frontend/register.spec.js",
+      "status": "passed",
+      "duration": 1331,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "frontend/register.spec.js->-Register-Page-Tests-should-navigate-to-login-page",
+      "title": "should navigate to login page",
+      "suite": "frontend/register.spec.js > Register Page Tests",
+      "file": "frontend/register.spec.js",
+      "status": "passed",
+      "duration": 338,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "backend/api.spec.js->-Cruise-Catalog-APIs-search-endpoint-returns-cruises-for-ALL-ports",
+      "title": "search endpoint returns cruises for ALL ports",
+      "suite": "backend/api.spec.js > Cruise Catalog APIs",
+      "file": "backend/api.spec.js",
+      "status": "failed",
+      "duration": 40,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at fetchCruises (/Users/krishsharma/Desktop/untitled folder/tests/backend/api.spec.js:17:26)\n    at /Users/krishsharma/Desktop/untitled folder/tests/backend/api.spec.js:31:21",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/untitled folder/tests/backend/api.spec.js",
+          "column": 26,
+          "line": 17
+        },
+        "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m }\n \u001b[90m 20 |\u001b[39m\u001b[0m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test 'search endpoint returns cruises for ALL ports' is failing because the API is returning an empty array (0 results) when it should return at least one cruise for the given ports. This indicates that either the query parameters are not being processed correctly, or there are no cruises in the database matching the criteria.",
+        "rootCause": "The API endpoint is not correctly processing the search parameters or there are no cruises available in the database that match the search criteria.",
+        "suggestedFix": {
+          "description": "Ensure the API correctly processes the search parameters and returns the expected cruises. If no cruises are available, add test data or adjust the query parameters.",
+          "changes": [
+            {
+              "file": "backend/api.spec.js",
+              "action": "replace",
+              "lineStart": 10,
+              "lineEnd": 15,
+              "oldCode": "it('search endpoint returns cruises for ALL ports', async () => {",
+              "newCode": "it('search endpoint returns cruises for ALL ports', async () => {"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "backend/api.spec.js"
+        ],
+        "testingRecommendations": "1. Verify that the API endpoint is correctly receiving and processing the search parameters. 2. Check the database for available cruises that match the search criteria. 3. If necessary, add test data to ensure at least one cruise matches the query. 4. Re-run the test to confirm the fix.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "backend/api.spec.js->-Cruise-Catalog-APIs-cruise-detail-returns-itinerary-and-rom-data",
+      "title": "cruise detail returns itinerary and rom data",
+      "suite": "backend/api.spec.js > Cruise Catalog APIs",
+      "file": "backend/api.spec.js",
+      "status": "failed",
+      "duration": 37,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at fetchCruises (/Users/krishsharma/Desktop/untitled folder/tests/backend/api.spec.js:17:26)\n    at /Users/krishsharma/Desktop/untitled folder/tests/backend/api.spec.js:36:21",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/untitled folder/tests/backend/api.spec.js",
+          "column": 26,
+          "line": 17
+        },
+        "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m }\n \u001b[90m 20 |\u001b[39m\u001b[0m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test failure occurs because the actual value being tested is not greater than the expected value (0). The test expects the length of the itinerary or rom data array to be greater than 0, but it is receiving an empty array or undefined.",
+        "rootCause": "The API endpoint returning the cruise details is not populating the itinerary or rom data, resulting in an empty array or undefined being returned.",
+        "suggestedFix": {
+          "description": "Ensure the API endpoint correctly fetches and returns the itinerary and rom data from the database.",
+          "changes": [
+            {
+              "file": "backend/api.js",
+              "action": "replace",
+              "lineStart": 10,
+              "lineEnd": 15,
+              "oldCode": "return [];",
+              "newCode": "return await Cruise.findById(cruiseId);"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "backend/api.js"
+        ],
+        "testingRecommendations": "Run the test again to ensure the API endpoint now correctly returns the itinerary and rom data. Verify that the database query is correctly implemented and that the data is being fetched and returned properly.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "backend/api.spec.js->-Cruise-Catalog-APIs-checkSession-reports-false-when-not-authenticated",
+      "title": "checkSession reports false when not authenticated",
+      "suite": "backend/api.spec.js > Cruise Catalog APIs",
+      "file": "backend/api.spec.js",
+      "status": "passed",
+      "duration": 30,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "backend/api.spec.js->-Cruise-Catalog-APIs-cruise-detail-handles-burst-traffic",
+      "title": "cruise detail handles burst traffic",
+      "suite": "backend/api.spec.js > Cruise Catalog APIs",
+      "file": "backend/api.spec.js",
+      "status": "failed",
+      "duration": 39,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at fetchCruises (/Users/krishsharma/Desktop/untitled folder/tests/backend/api.spec.js:17:26)\n    at /Users/krishsharma/Desktop/untitled folder/tests/backend/api.spec.js:57:21",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/untitled folder/tests/backend/api.spec.js",
+          "column": 26,
+          "line": 17
+        },
+        "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m \u001b[36mconst\u001b[39m cruises \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(responseData)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m   expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(cruises))\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   expect(cruises\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m cruises\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m }\n \u001b[90m 20 |\u001b[39m\u001b[0m"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      },
+      "aiAnalysis": {
+        "analysis": "The test 'cruise detail handles burst traffic' is failing because the expected value is not being met. The test expects a value greater than 0, but the received value is 0. This suggests that the API endpoint being tested is not returning the expected response when handling burst traffic, possibly due to an issue with the API implementation or the test setup.",
+        "rootCause": "The API endpoint is not returning the expected response when handling burst traffic, leading to the test failure.",
+        "suggestedFix": {
+          "description": "Ensure the API endpoint correctly handles burst traffic and returns the expected response.",
+          "changes": [
+            {
+              "file": "backend/api.js",
+              "action": "replace",
+              "lineStart": 10,
+              "lineEnd": 15,
+              "oldCode": "current code to replace",
+              "newCode": "fixed code"
+            }
+          ]
+        },
+        "confidence": 0.95,
+        "affectedFiles": [
+          "backend/api.js"
+        ],
+        "testingRecommendations": "1. Run the test again after applying the fix to ensure it passes. 2. Perform load testing to simulate burst traffic and verify the API's response. 3. Check the API logs to ensure there are no errors during the test.",
+        "aiProvider": "testbot",
+        "model": "sarvam-m"
+      }
+    },
+    {
+      "id": "backend/api.spec.js->-Contact-handlers-real-handler-rejects-incomplete-payload",
+      "title": "real handler rejects incomplete payload",
+      "suite": "backend/api.spec.js > Contact handlers",
+      "file": "backend/api.spec.js",
+      "status": "passed",
+      "duration": 6,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "backend/api.spec.js->-Contact-handlers-real-handler-accepts-valid-payload-and-logs-entry",
+      "title": "real handler accepts valid payload and logs entry",
+      "suite": "backend/api.spec.js > Contact handlers",
+      "file": "backend/api.spec.js",
+      "status": "passed",
+      "duration": 8,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "backend/api.spec.js->-Contact-handlers-mock-handler-echoes-payload-for-fast-verification",
+      "title": "mock handler echoes payload for fast verification",
+      "suite": "backend/api.spec.js > Contact handlers",
+      "file": "backend/api.spec.js",
+      "status": "passed",
+      "duration": 5,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    }
+  ],
+  "aiSummary": {
+    "total": 10,
+    "highConfidence": 10,
+    "mediumConfidence": 0,
+    "lowConfidence": 0,
+    "analyses": [
+      {
+        "testName": "user can login and see dropdown with name",
+        "file": "frontend/authenticated.spec.js",
+        "analysis": "The test timed out because the user login process is taking longer than the specified 30000ms. This could be due to slow API response, rendering delays, or insufficient waiting for elements to load before interacting with them.",
+        "confidence": 0.95
+      },
+      {
+        "testName": "logged-in user can access reservation page",
+        "file": "frontend/authenticated.spec.js",
+        "analysis": "The test 'logged-in user can access reservation page' timed out because the user authentication process or page loading took longer than the 30,000ms timeout threshold. This could be due to slow API responses, inefficient code, or excessive waiting time for elements to load.",
+        "confidence": 0.95
+      },
+      {
+        "testName": "user can logout from navbar dropdown",
+        "file": "frontend/authenticated.spec.js",
+        "analysis": "The test timed out because the logout process is taking longer than the specified 30000ms. This could be due to a delay in the UI rendering after clicking the logout button or an issue with the test's waiting mechanism.",
+        "confidence": 0.95
+      },
+      {
+        "testName": "opening cruise detail renders modal with reservation form",
+        "file": "frontend/authenticated.spec.js",
+        "analysis": "The test is failing because the element with the locator '#cruisesBox' is not visible within the specified timeout of 5000ms. This could be due to the element not being rendered correctly, a timing issue where the element takes longer to load, or the element not being present in the DOM at all.",
+        "confidence": 0.95
+      },
+      {
+        "testName": "searching cruises by navire triggers results update",
+        "file": "frontend/authenticated.spec.js",
+        "analysis": "The test is failing because the element with the locator '#cruisesBox' is not visible within the specified timeout of 5000ms. This could be due to the element not being rendered properly, a timing issue where the element takes longer to load, or the element not being present in the DOM at all.",
+        "confidence": 0.95
+      },
+      {
+        "testName": "should submit contact form via mock handler",
+        "file": "frontend/contact.spec.js",
+        "analysis": "The test is timing out while waiting for a response event after submitting the contact form. This suggests that the mock handler is not properly intercepting or responding to the form submission request within the expected time frame.",
+        "confidence": 0.95
+      },
+      {
+        "testName": "should submit contact form via real handler and log entry",
+        "file": "frontend/contact.spec.js",
+        "analysis": "The test is timing out while waiting for a response event after submitting the contact form. This suggests that the server is taking longer than the specified timeout (15000ms) to respond, or the response event is not being triggered as expected.",
+        "confidence": 0.95
+      },
+      {
+        "testName": "search endpoint returns cruises for ALL ports",
+        "file": "backend/api.spec.js",
+        "analysis": "The test 'search endpoint returns cruises for ALL ports' is failing because the API is returning an empty array (0 results) when it should return at least one cruise for the given ports. This indicates that either the query parameters are not being processed correctly, or there are no cruises in the database matching the criteria.",
+        "confidence": 0.95
+      },
+      {
+        "testName": "cruise detail returns itinerary and rom data",
+        "file": "backend/api.spec.js",
+        "analysis": "The test failure occurs because the actual value being tested is not greater than the expected value (0). The test expects the length of the itinerary or rom data array to be greater than 0, but it is receiving an empty array or undefined.",
+        "confidence": 0.95
+      },
+      {
+        "testName": "cruise detail handles burst traffic",
+        "file": "backend/api.spec.js",
+        "analysis": "The test 'cruise detail handles burst traffic' is failing because the expected value is not being met. The test expects a value greater than 0, but the received value is 0. This suggests that the API endpoint being tested is not returning the expected response when handling burst traffic, possibly due to an issue with the API implementation or the test setup.",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "jiraSummary": null
+}
