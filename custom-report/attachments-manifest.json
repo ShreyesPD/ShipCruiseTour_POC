@@ -1,12 +1,48 @@
 {
-  "mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated": {
+  "mscship_14-MSCSHIP-14-Cont-616ba-P-status-code-should-be-200-jira-generated": {
     "screenshots": [
       {
         "name": "test-failed-1.png",
-        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/test-failed-1.png",
+        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-616ba-P-status-code-should-be-200-jira-generated/test-failed-1.png",
         "contentType": "image/png"
       }
     ],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-616ba-P-status-code-should-be-200-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": [],
+    "folderName": "mscship_14-MSCSHIP-14-Cont-616ba-P-status-code-should-be-200-jira-generated"
+  },
+  "tests/jira-generated/mscship_14.spec.js": {
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-616ba-P-status-code-should-be-200-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-616ba-P-status-code-should-be-200-jira-generated/video.webm",
+        "contentType": "video/webm"
+      },
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": []
+  },
+  "mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated": {
+    "screenshots": [],
     "videos": [
       {
         "name": "video.webm",
@@ -17,24 +53,6 @@
     "traces": [],
     "other": [],
     "folderName": "mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated"
-  },
-  "tests/jira-generated/mscship_14.spec.js": {
-    "screenshots": [
-      {
-        "name": "test-failed-1.png",
-        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/test-failed-1.png",
-        "contentType": "image/png"
-      }
-    ],
-    "videos": [
-      {
-        "name": "video.webm",
-        "path": "../test-results/mscship_14-MSCSHIP-14-Cont-67b33-should-display-successfully-jira-generated/video.webm",
-        "contentType": "video/webm"
-      }
-    ],
-    "traces": [],
-    "other": []
   },
   "mscship_15-MSCSHIP-15-Regr-333bb-splay-all-required-elements-jira-generated": {
     "screenshots": [
@@ -74,7 +92,13 @@
     "other": []
   },
   "mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated": {
-    "screenshots": [],
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
     "videos": [
       {
         "name": "video.webm",
@@ -87,11 +111,54 @@
     "folderName": "mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated"
   },
   "tests/jira-generated/mscship_16.spec.js": {
-    "screenshots": [],
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
     "videos": [
       {
         "name": "video.webm",
         "path": "../test-results/mscship_16-MSCSHIP-16-Regr-234fb-d-display-validation-errors-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": []
+  },
+  "mscship_17-MSCSHIP-17-Regr-efa5f-ts-the-form-with-valid-data-jira-generated": {
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_17-MSCSHIP-17-Regr-efa5f-ts-the-form-with-valid-data-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_17-MSCSHIP-17-Regr-efa5f-ts-the-form-with-valid-data-jira-generated/video.webm",
+        "contentType": "video/webm"
+      }
+    ],
+    "traces": [],
+    "other": [],
+    "folderName": "mscship_17-MSCSHIP-17-Regr-efa5f-ts-the-form-with-valid-data-jira-generated"
+  },
+  "tests/jira-generated/mscship_17.spec.js": {
+    "screenshots": [
+      {
+        "name": "test-failed-1.png",
+        "path": "../test-results/mscship_17-MSCSHIP-17-Regr-efa5f-ts-the-form-with-valid-data-jira-generated/test-failed-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "videos": [
+      {
+        "name": "video.webm",
+        "path": "../test-results/mscship_17-MSCSHIP-17-Regr-efa5f-ts-the-form-with-valid-data-jira-generated/video.webm",
         "contentType": "video/webm"
       }
     ],
